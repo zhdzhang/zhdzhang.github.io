@@ -1,0 +1,1109 @@
+/*******************
+* First, a reset
+********************/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+/* remember to define focus styles!
+:focus {
+    outline: 0;
+}*/
+body {
+    line-height: 1;
+    color: black;
+    background: white;
+}
+ol, ul {
+    list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+caption, th, td {
+    text-align: left;
+    font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: "";
+}
+blockquote, q {
+    quotes: "" "";
+}
+
+
+
+/*******************
+* Global
+********************/
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+	font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size:14px;
+}
+
+
+a {
+    color: #5a5;
+    text-decoration: none;
+    border-bottom: 1px dotted;
+}
+a:hover {
+    border-bottom: 1px solid;
+}
+
+h1 {
+	font-size: 270%;
+}
+
+h2 {
+    font-size: 200%;
+}
+
+h3 {
+    font-size: 170%;
+}
+
+h4 {
+    font-size: 150%;
+}
+
+#container {
+	position: relative;
+}
+
+#debug {
+	font-size: 75%;
+	text-align: center;
+	padding: 5px;
+	margin: 5px;
+	background: #fcc;
+	border: 1px solid #966;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+#debug a {
+	color: inherit;
+	text-decoration: underline;
+	border: none;
+}
+
+a.email .b, a.email .d, a.email .e, a.email .f, a.email .g, a.email .j {
+	display: none;
+}
+
+.hidden {
+	display: none;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.center {
+	text-align: center !important;
+}
+.clearboth {
+	clear: both;
+}
+
+em {
+   font-style: italic;
+}
+pre {
+	font-family: monospace;
+}
+.gray {
+	color: #999;
+}
+
+
+nav {
+	clear: both;
+	/* display: block; */
+
+	background-position: center;
+	padding: 2%;
+	/* overflow: hidden; */
+	/* position: absolute; */
+	/* left: 0; */
+	/* top: 50%;  */
+	/* transform: translateY(-50%); */
+}
+
+nav a {
+	display: block;
+	color: orange;
+	text-align: center;
+	text-decoration: none;
+	font-size: 17px;
+	font-family: helvetica;
+	letter-spacing: 2px;
+}
+
+nav a:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+
+/*******************
+* Header, messages, bodyer
+********************/
+
+#header {
+    background: #555;
+    color: white;
+    padding: 4px 8px 6px;
+}
+
+#header a {
+    color: inherit;
+    border-bottom: none;
+}
+
+#messages {
+	width: 100%;
+	position: absolute;
+}
+
+#messages li {
+	padding: 5px 8px;
+}
+
+#messages li.success {
+	background: #cfc;
+	border-bottom: 1px dotted #5a5;
+}
+
+#bodyer #content p,
+p.story {
+	font-size: 22px;
+	margin: 1em 0;
+	line-height: 1.4;
+	font-weight: 300;
+}
+p.story {
+	text-align: justify;	
+}
+#bodyer ol,
+#bodyer ul {
+	font-size: 140%;
+	line-height: 1.4;
+}
+#bodyer ul {
+    list-style: disc;
+}
+#bodyer ul li {
+	margin: .5em 0 .5em 2em;
+	font-weight: 300;	
+}
+
+
+
+
+/*******************
+* Index
+********************/
+
+#index {
+    margin: 0 auto;
+    padding: 50px 0;
+    width: 1000px;
+}
+
+#index .nameblock p {
+	font-size: 120%;
+	margin-bottom: 2px;
+	line-height: 1;
+}
+#index .nameblock .right {
+	margin-top: 3px;
+	text-align: right;
+}
+#index .nameblock .right a {
+	border: none;
+}
+#index .nameblock h1 {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+#index .nameblock div.pic {
+	width: 75px;
+	float: left;
+	margin-right: 15px;
+}
+#index .nameblock div.pic a {
+	border: none;
+}
+#index .nameblock div.pic img {
+	width: 100%;
+}
+
+#index #content {
+	clear: both;
+	padding: 25px 0;
+}
+#index h2 {
+	background-color: #dfd;
+	border-bottom: 2px solid #5a5;
+	padding: 5px 10px;
+	margin: 1.8em 0 1em;
+	font-weight: 400;
+}
+#index h2 span.h2link a {
+	font-size: 60%;
+	float: right;
+	padding: .4em;
+	border: none;
+}
+#index h2 span.h2link a:hover {
+	background-color: #5a5;
+	color: #dfd;
+}
+
+/* .navbar {
+	background-repeat: no-repeat;
+	height: 70px;
+} */
+
+#index .navbar ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#index .navbar li {
+	float: left;
+}
+  
+/* #index .navbar  a {
+	display: block;
+	padding: 8px;
+	background-color: #dddddd;
+} */
+
+/****** Header ******/
+
+span.emhover {
+	border-bottom: 1px dotted;
+}
+span.emhover2 {
+	display: none;
+}
+span.emhover:hover span.emhover2 {
+	display: block;
+	position: relative;
+	top: -2em;
+	padding: 2em 0 0;
+}
+span.emhover:hover span.emhover3 {
+	display: block;
+	padding: 1em;
+	margin: 1em 1em .5em;
+	box-shadow: 2px 2px 5px 0px #000;
+	background-color: #dfd;
+}
+
+/****** Projects ******/
+div.project-teaser {
+	clear: both;
+	padding-bottom: .75em;
+	margin-bottom: 30px;
+}
+div.project-teaser div.image {
+	float: left;
+	width: 39%;
+}
+div.project-teaser div.image a {
+	border: none;
+}
+div.project-teaser div.image img {
+	width: 100%;
+}
+div.project-teaser div.text {
+	float: right;
+	width: 59%;
+}
+div.project-teaser div.text h3 {
+	font-size: 22px;
+	font-weight: 400;
+}
+div.project-teaser div.text h3.authors {
+	font-size: 15px;
+        font-weight: 400;
+	color: #ccc;
+	line-height: 1.4;
+        /*margin-top: 5px;*/
+}
+div.project-teaser div.text h3.authors:hover {
+	color: #888;
+}
+#bodyer #content div.project-teaser div.text p {
+	font-size: 16px;
+	margin: 0;
+	margin-top: .5em;
+	line-height: 1.4;
+}
+#bodyer #content div.project-teaser div.text p.header {
+        margin-bottom: 1.0em;
+}
+
+/****** Publications ******/
+ol.publist li {
+	list-style: none;
+	margin: 10px 25px;
+	font-size: 85%;
+	font-weight: 300;
+}
+ol.publist span.title {
+	font-weight: normal;
+}
+ol.publist span.title a {
+	font-weight: normal;
+}
+ol.publist div.abstract,
+ol.publist div.bib {
+	margin: 10px 0;
+	padding: 0 10px;
+	border-left: 5px solid;
+	background: #ddd;
+}
+ol.publist div.abstract p {	
+	font-size: 100% !important;
+	margin: 0 !important;
+	padding: 8px 0;
+}
+ol.publist div.bib {
+	overflow: auto;
+}
+
+ol.publist li div.paperthumb {
+}
+ol.publist li a.imglink,
+ol.publist li div.non-imglink {
+	float: left;
+	border: none;
+	margin-right: 10px;
+	text-align: center;
+	padding: 6px 10px 3px;
+	font-size: 80%;
+}
+ol.publist li a.imglink:hover  {
+	color: #dfd;
+	background-color: #5a5;
+}
+ol.publist li img {
+	max-height: 150px;
+	max-width: 80px;
+	box-shadow: 2px 2px 5px 0px #000;
+	margin-bottom: 5px;
+}
+ol.publist li div.nonthumb {
+	margin-left: 110px;
+}
+#index div.narrow {
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+
+
+/*******************
+* Papers
+********************/
+#container.papers {
+	min-height: 100%;
+	background: #aaa;
+}
+#publist {
+	background: white;
+	width: 54%;
+	padding: 10px 0;
+	float: left;
+	border-right: 2px solid #444;
+	padding-bottom: 200px;
+}
+#publist h2 {
+	margin: 20px 20px 20px;
+	text-align: center;
+}
+#publist ul {
+	font-size: 90%;
+	line-height: 1.3;
+}
+#publist ul {
+    list-style: none;
+}
+#publist ul li {
+	margin: 0;
+	border-top: 2px solid white;
+	border-bottom: 2px solid white;
+}
+#publist ul li div.nubwrap {
+	padding: 0px 15px;
+	position: relative;
+	left: 2px;
+}
+#publist ul.publist li a.imglink {
+	float: left;
+	margin-right: 10px;
+	text-align: center;
+	border: none;
+	padding: 3px 10px;
+}
+#publist ul.publist li a.imglink img {
+	max-height: 150px;
+	max-width: 80px;
+	box-shadow: 2px 2px 5px 0px #000;
+	margin-bottom: 5px;
+}
+#publist ul.publist li a.imglink:hover  {
+	color: #dfd;
+	background-color: #5a5;
+}
+#publist ul.publist li.selected {
+	background: #dfd;
+	border-top: 2px solid #5a5;
+	border-bottom: 2px solid #5a5;
+}
+#publist ul.publist li.selected div.nubwrap {
+	background: url('nub.png') no-repeat right;
+}
+#previewpane-wrap {
+	width: 45%;
+	float: right;
+}
+#previewpane {
+	padding: 10px 20px 10px 10px;
+}
+#previewpane img {
+	max-height: 150px;
+	max-width: 22%;
+	box-shadow: 2px 2px 5px 0px #000;
+	margin: 0 10px 10px 0;
+}
+#previewpane h2 {
+	font-size: 28px;
+	margin: 10px 0 5px;
+}
+#previewpane p {
+	line-height: 1.3;
+	font-size: 14px;
+}
+#previewpane textarea {
+	font-family: monospace;
+	width: 100%;
+	background: #bbb;
+}
+span.award {
+	font-weight: bold;
+}
+
+/*******************
+* Prowl
+********************/
+
+div.prowl {
+    margin: 0 auto;
+    padding: 80px 0 50px;
+    width: 500px;
+}
+
+div.prowl p {
+	margin: 10px 0 !important;
+    line-height: 1.2;
+}
+
+ul.errorlist {
+	color: red;
+}
+
+div.prowl textarea {
+	width: 99%;
+	font-size: 150%;
+	font-family: inherit;
+	height: 3.8em;
+}
+
+div.prowl form {
+	text-align: center;	
+}
+
+div.prowl input {
+	font-size: 100%;
+}
+
+
+
+
+/*******************
+* Research pages
+********************/
+
+div.research_page_container h2 {
+	margin: 50px 0 30px;
+	line-height: 1.4;
+}
+div.research_page_container h3 {
+	margin: 30px 0 10px;
+	line-height: 1.4;
+}
+div.research_page_container p.story {
+	font-size: 21px;
+}
+div.research_page_container p.authors {
+	font-size: 19px;
+	color: #888;
+	line-height: 1.4;
+	margin-top: 5px;
+}
+div.research_page_container {
+    margin: 0 auto;
+    padding: 50px 0 100px;
+    width: 850px;
+}
+div.research_page_container.wide {
+	margin: 0 5%;
+    width: 90%
+}
+div.research_page_container div.figure {
+	margin: 40px 0;
+}
+div.research_page_container div.image.c100 {
+	margin: 0 auto;
+	width: 100%;
+}
+div.research_page_container div.image.c90 {
+	margin: 0 auto;
+	width: 90%;
+}
+div.research_page_container div.image.c80 {
+	margin: 0 auto;
+	width: 80%;
+}
+div.research_page_container div.image.c70 {
+	margin: 0 auto;
+	width: 70%;
+}
+div.research_page_container div.image.c60 {
+	margin: 0 auto;
+	width: 60%;
+}
+div.research_page_container div.image.c50 {
+	margin: 0 auto;
+	width: 50%;
+}
+div.research_page_container div.image.c40 {
+	margin: 0 auto;
+	width: 40%;
+}
+div.research_page_container div.image.c30 {
+	margin: 0 auto;
+	width: 30%;
+}
+div.research_page_container div.image.c20 {
+	margin: 0 auto;
+	width: 20%;
+}
+div.research_page_container div.image.c10 {
+	margin: 0 auto;
+	width: 10%;
+}
+div.research_page_container div.image a {
+    border-bottom: none;
+}
+div.research_page_container div.image img {
+	width: 100%;
+}
+#bodyer div.research_page_container div.figure p.caption {
+	width: 90%;
+	text-align: justify;
+	margin: .5em auto 0;
+	line-height: 1.4;
+	font-weight: 300;
+	font-size: 19px;
+}
+div.research_page_container div.youtube {
+	margin: 0 auto;
+	text-align: center;
+}
+div.research_page_container div.youtube {
+	margin: 0 auto;
+	text-align: center;
+}
+div.research_page_container div.deepvis-gallery div.example {
+	width: 100px;
+	float: left;
+	margin: 0 10px 0 0;
+}
+div.research_page_container div.deepvis-gallery div.example p.caption {
+	margin: 1px 0 0;
+	height: 5ex;
+}
+
+
+
+/*******************
+* Trip gallery
+********************/
+
+div.gallery_page_container {
+    margin: 0 auto;
+    padding: 50px 0;
+    width: 730px;
+}
+
+div.prevNext a.prev {
+	float: left;
+}
+div.prevNext a.next {
+	float: right;
+}
+
+#trip_summary {
+	margin: 15px 0;
+	padding: 3px 10px 5px;
+	border-top: 1px dotted #555;
+	border-bottom: 1px dotted #555;
+	background-color: #ddd;
+}
+#trip_summary p.title {
+	margin-bottom: 6px;
+}
+#trip_summary p {
+	margin: 3px 0;
+	font-size: 90%;
+}
+
+#trip_summary .current {
+    font-weight: bold;
+}
+#trip_summary .current a {
+	color: inherit;
+	border: none;
+}
+#trip_summary span.notDone {
+	color: #888;
+	font-style: italic;
+}
+
+div.gallery_page_container p.story.right {
+    text-align: right;
+}
+
+
+
+div.flickr_vid,
+div.flickr_img {
+    background: #555;
+    margin: 15px auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: relative;
+    text-align: center;
+}
+div.flickr_img {
+    width: 730px;
+}
+
+div.flickr_vid div.img_link,
+div.flickr_img div.img_link {
+    visibility: hidden;
+    opacity: 60%;
+    position: absolute;
+    top: 20px;
+    left: 15px;
+}
+
+div.flickr_vid:hover div.img_link,
+div.flickr_img:hover div.img_link {
+    visibility: visible;
+}
+div.flickr_vid div.img_link a,
+div.flickr_img div.img_link a {
+    background: #555;
+    opacity: .3;
+    padding: 6px 8px;
+    color: white;
+    text-decoration: none;
+    font-size: 80%;
+    border-bottom: none;
+    border-bottom-right-radius: 10px;
+    -moz-border-radius-bottomright: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+}
+div.flickr_vid div.img_link a:hover,
+div.flickr_img div.img_link a:hover {
+    opacity: .8;
+    border-bottom: none;
+}
+
+div.flickr_vid object {
+}
+div.flickr_img img {
+    width: 700px;
+}
+
+div.flickr_vid p.caption,
+div.flickr_img p.caption {
+    color: white;
+    margin: 8px 15px -6px;
+    font-size: 100%;
+    line-height: 1.4;
+}
+div.jkhint {
+	opacity: .5;
+	background: #ccc;
+	padding: 10px;
+	width: 100px;
+    border-top-left-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -webkit-border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    position: absolute;
+    right: 0;
+    box-shadow: 0px 3px 10px 0px #000;
+	-moz-box-shadow: 0px 3px 10px 0px #000;
+	-webkit-box-shadow: 0px 3px 10px 0px #000;
+	z-index: 1;
+}
+div.jkhint p {
+	margin: 5px 0;
+	text-align: center;
+}
+div.jkhint img {
+	width: 40px;
+	display: block;
+	margin: 0 auto;
+}
+
+/*******************
+* Quotes
+********************/
+
+div.quotepage div.quote {
+	margin: 15% auto 0;
+	width: 80%;
+	position: relative;
+}
+div.quotepage p.text {
+	margin-bottom: .8em;
+}
+div.quotepage p.author {
+	text-align: right;
+	font-size: 40px;
+}
+div.quotepage p.author span.extra {
+	display: block;
+	opacity: 0;
+}
+div.quotepage p.author:hover span.extra {
+	opacity: 1;
+}
+div.quotepage {
+	font-family: "Hoefler Text", "Georgia", serif;
+	line-height: 1.3;
+	font-size: 60px;
+}
+div.quotepage.gt100 {
+	font-size: 52px;
+}
+div.quotepage.gt200 {
+	font-size: 45px;
+}
+div.quotepage.gt400 {
+	font-size: 35px;
+}
+div.quotepage.gt1000 {
+	font-size: 26px;
+}
+
+
+
+
+/*******************
+* Books
+********************/
+
+#books {
+    margin: 0 auto;
+    padding: 50px 0;
+    width: 700px;
+}
+#books h1 {
+	margin: 0 0 .5em;
+}
+
+#books h2 {
+	background-color: #dfd;
+	border-bottom: 2px solid #5a5;
+	margin: 1em 0 1em;
+	padding: 5px;	
+}
+
+#books div.review {
+	margin: 4em 0;
+}
+
+#books div.cover {
+	float: left;
+}
+#books div.cover p img {
+	max-height: 160px;
+	max-width: 100px;
+}
+#books div.cover p a {
+	border-bottom: none;
+}
+
+#books div.review div.main {
+	margin-left: 120px;
+}
+#books div.review div.main div.rating {
+	float: right;
+}
+#books div.review div.main p.author a {
+	border-bottom: none;
+	display: inline-block;
+}
+#books div.review div.main p.author a:hover {
+}
+#books div.review div.main p.author img {
+	max-height: 40px;
+	max-width: 50px;
+	margin-right: .5em;
+	vertical-align: middle;
+}
+#books div.review div.main p.author a span.name {
+	border-bottom: 1px dotted;
+}
+#books div.review div.main p.author a:hover span.name {
+	border-bottom: 1px solid;	
+}
+
+#books div.review p.title {
+	font-family: "Hoefler Text", "Georgia", serif;
+	font-size: 220%;
+}
+#books div.description p {
+	font-size: 80%;
+	margin: .7em 0;
+}
+
+
+
+/*******************
+* Calendar
+********************/
+
+div.calendar_page_container {
+    margin: 0 auto;
+    text-align: center;
+    padding: 1em;
+}
+div.calendar_page_container h2 {
+	margin: .3em 0 .5em;
+}
+
+
+
+/*******************
+* Story pages
+********************/
+
+div.story_container {
+    margin: 0 auto;
+    padding: 50px 0;
+    width: 730px;
+}
+div.story_container p {
+	font-size: 22px;
+	margin: 1.5em 0;
+	line-height: 1.7;
+	text-indent:50px;
+	text-align: justify;
+}
+div.story_container p.noindent {
+	text-indent:0;
+}
+div.story_container p.aside {
+	margin: 15px 0;
+	background-color: #ddd;
+	padding: 3px 10px 5px;
+	border-top: 1px dotted #555;
+	border-bottom: 1px dotted #555;
+	font-size: 90%;
+}
+
+
+
+/*******************
+* Press page
+********************/
+
+div.press_container {
+    margin: 0 auto;
+    padding: 50px 0;
+    width: 800px;
+}
+div.press_container h1 {
+}
+div.press_container h2 {
+	background-color: #ddd;
+	border-bottom: 2px solid #555;
+	padding: 5px 10px;
+	margin: 1.8em 0 1em;
+}
+div.press_container h3 {
+	border-bottom: 2px solid #555;
+	padding: 5px;
+	margin: 1.8em 0 1em;
+	font-size: 120%;
+}
+div.press_container div.story p {
+	margin: 20px 0;
+	line-height: 1.4;
+}
+/*** normal press items ***/
+div.pressitem {
+	margin-bottom: 10px;
+}
+div.pressitem div.logo {
+	float: left;
+	width: 150px;
+	text-align: right;
+}
+div.pressitem div.logo img {
+	max-width: 100%;
+	max-height: 40px;
+}
+div.pressitem div.text {
+	margin-left: 170px;
+	line-height: 1.4;
+}
+div.pressitem div.text span.date {
+	float: right;
+	color: #ddd;
+	font-size: 80%;
+}
+div.pressitem:hover div.text span.date {
+	color: #888;
+}
+div.pressitem div.text span.outlet {
+	font-weight: bold;
+}
+/*** smaller press items ***/
+div.smaller {
+	border-top: 1px dotted #888;
+	margin-top: 15px;
+	padding-top: 15px;
+	padding-left: 70px;
+}
+div.smaller div.pressitem {
+	margin-bottom: 5px;
+	font-size: 75%;
+}
+div.smaller div.pressitem div.logo {
+	width: 80px;
+}
+div.smaller div.pressitem div.logo img {
+	max-height: 30px;
+}
+div.smaller div.pressitem div.text {
+	margin-left: 100px;
+	line-height: 1.3;
+}
+/*** Different style for press on home page***/
+#index div.pressitem {
+	margin: 5px 25px;
+}
+#index div.pressitem div.logo {
+	padding-left: 10px;
+	width: 160px;
+}
+#index div.pressitem div.logo img {
+	max-height: 35px;
+}
+#index div.pressitem div.text {
+	margin-left: 190px;
+}
+#bodyer #index #content div.pressitem  p {
+	margin: 0;
+	font-size: 100%;
+}
+#index div.pressitem div.text span.date {
+	display: none;
+}
+#index div.pressitem div.text span.outlet {
+	display: none;
+}
+
+
+
+/*******************
+* jQuery.Rating Plugin CSS - http://www.fyneworks.com/jquery/star-rating/ 
+********************/
+div.rating-cancel,div.star-rating{float:left;width:17px;height:15px;text-indent:-999em;cursor:pointer;display:block;background:transparent;overflow:hidden}
+div.rating-cancel,div.rating-cancel a{background:url(delete.gif) no-repeat 0 -16px}
+div.star-rating,div.star-rating a{background:url(star.png) no-repeat 0 0px}
+div.rating-cancel a,div.star-rating a{display:block;width:16px;height:100%;background-position:0 0px;border:0}
+div.star-rating-on a{background-position:0 -16px!important}
+div.star-rating-hover a{background-position:0 -32px}
+/* Read Only CSS */
+div.star-rating-readonly a{cursor:default !important}
+/* Partial Star CSS */
+div.star-rating{background:transparent!important;overflow:hidden!important}
+
+
+
+
+/*
+DEP
+.res-teaser {
+}
+.res-teaser:hover {
+	background: #bbb;	
+}
+.res-teaser p {
+}
+.res-teaser img {
+	border-left: 1px dotted;
+	margin: 0 0 10px 10px;
+	padding-left: 10px;
+	float: right;
+}
+*/
+
+
+
+
+
+
+
+
