@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sakuragi - Personal Website</title>
+    <title>Zhendong - Personal Website</title>
     <link rel="stylesheet" type="text/css" media="screen" href="screen_v6.css">
 </head>
 
@@ -57,13 +57,24 @@
                 <main class="main-content">
                     <section id="about" class="section">
                         <h2>About Me</h2>
-                        <p>Slow thinker, absolutely no multitask at all times</p>
+                        <ul>
+                            <li>A self-motivated, deeply engineering focused, and intensely curious engineer who is strong at knowledge summarizing and analogical reasoning.</li>
+                            <li>Full servo drive motion control development: feedback & feedforward control, PID control with pole placement, disturbance rejection (compliance, gear backlash), load adaptation and resonance mitigation using load observer, full servo loop frequency analysis, path planning such as position interpolation, Point-to-Point move, etc</li>
+                            <li>15+ years of hands-on experience with Matlab, Simulink, Model-Based-Design autocode generation, c embedded, physical electro-mechanical system modeling and simulation, motor control power electronics system development including sensorless control, PWM modulation for power converters, drive protection, etc.</li>
+                            <li>knowledge about drive thermal protection, which includes inverter thermal loss calculation, junction temperature prediction, current limit value or PWM frequency fold back, power cycling and thermal cycling, etc.</li>
+                            <li>Comprehensive job experience with project management tools such as SAFe Agile, JIRA, JAMA, and software development tools such as GitLab, CI/CD teamcity, binary publish JFrog Artifactory, etc</li>
+                        </ul>
 
                         <p class="center"><a href="#navbar">Navigation</a></p>
                     </section>
 
                     <section id="experience" class="section">
                         <h2>Experience</h2>
+                        <h3>United Technology Research Center</h3>
+
+                        <div class="image">
+                            <img style="width:50%; display:flex; justify-content: center; align-items: center;" src ="../materials/pictures/divider.PNG">
+                        </div>
                         <h3>Rockwell Automation:</h3>
                         <p> I worked at Rockwell Automation from 2013 ~ 2022.  Rockwell Automation is the craddle for modern industrial drives, which includes motor control and power electronics.</p>
                         <p> worked with a group of most experienced but super humble and nice engineers. They not only teach me about the knowledges, but also show me the merits of elegent gentleman.</p>
@@ -78,7 +89,9 @@
                     </section>
 
                     <section id="project" class="section">
-                        <h2>Project</h2>
+                        <h2>Projects<span font-size="100%">(Embedded Firmware Developoment)</span></h2>
+
+                        <!-- Rockwell Carrier Polaris -->
                         <div class="project-teaser">
                             <div class="image">
                                 <a href="https://www.carrier.com/commercial/en/us/19mv/">
@@ -99,12 +112,109 @@
                                 </p>
                             </div>
 
-                            <div>
+                            <div class="subimage">
+                                <img height="150" src="../project/high_speed_hvac/RA_mequon_manufacture.jpg" alt="Inverter in Rockwell Factory">
+                                <img height="150" src="../project/high_speed_hvac/carrier_with_ra_drive.jpg" alt="Demo Inverter at Carrier Facility">
+
+                                <video class="video" height="150" controls>
+                                    <source src="../project/high_speed_hvac/inverter_by_chiller.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <video class="video" height="150" controls>
+                                    <source src="../project/high_speed_hvac/inverter_on_chiller.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            
+                            <div class="clearboth"></div>
+                        </div>
+                        
+                        <!-- Rockwell PowerFlex 755T -->
+                        <div class="project-teaser">
+                            <div class="image">
+                                <a href="https://www.rockwellautomation.com/en-us/products/hardware/allen-bradley/drives/low-voltage-ac-drives/architecture-drives/20g-powerflex-755t.html">
+                                    <img src="../project/powerflex_755T/755T_photo.jpg" alt="PowerFlex 755T">
+                                </a>
+                            </div>
+                            
+                            <div class="text">
+                                <h3>PowerFlex 755TL, TR, and TM Drives</h3>
+                                <!-- <h3 class="authors">Yixuan Li, Jason Yosinski, Jeff Clune, Hod Lipson, and John Hopcroft</h3> -->
+                                <p class="header">
+                                    <a href="https://www.youtube.com/watch?v=jz4sO0rEYaM">Youtube Video</a>
+                                </p>
+                        
+                                <p>
+                                    Involving in the Rockwell Automation Next Generation High performance controller (755T series) using model based design technology. 
+                                    <a href="/convergent">Read more »</a>
+                                </p>
+                            </div>
+
+                            <div class="subimage">
+                                <img height="150" src="../project/powerflex_755T/hpc_outside.jpg" alt="Inverter in Rockwell Factory">
+                                <img height="150" src="../project/powerflex_755T/hpc_control_frame.jpg" alt="Demo Inverter at Carrier Facility">
+
+                                <!-- <video class="video" height="150" controls>
+                                    <source src="../project/powerflex_755T/inverter_by_chiller.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <video class="video" height="150" controls>
+                                    <source src="../project/powerflex_755T/inverter_on_chiller.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video> -->
 
                             </div>
                             
                             <div class="clearboth"></div>
                         </div>
+
+                        <!-- Rockwell PowerFlex 527 -->
+                        <div class="project-teaser">
+                            <div class="image">
+                                <a href="https://www.rockwellautomation.com/en-us/products/hardware/allen-bradley/drives/low-voltage-ac-drives/architecture-drives/20g-powerflex-755t.html">
+                                    <img src="../project/powerflex_527/pf527_photo.jpg" alt="PowerFlex 527">
+                                </a>
+                            </div>
+                            
+                            <div class="text">
+                                <h3>PowerFlex 527 Cip Motion Drive</h3>
+                                <!-- <h3 class="authors">Yixuan Li, Jason Yosinski, Jeff Clune, Hod Lipson, and John Hopcroft</h3> -->
+                                <p class="header">
+                                    <a href="https://www.youtube.com/watch?v=jz4sO0rEYaM">Youtube Video</a>
+                                </p>
+                        
+                                <p>
+                                    Involving in the Rockwell Automation Next Generation High performance controller (755T series) using model based design technology. 
+                                    <a href="/convergent">Read more »</a>
+                                </p>
+                            </div>
+
+                            <div class="subimage">
+                                <img height="150" src="../project/powerflex_755T/hpc_outside.jpg" alt="Inverter in Rockwell Factory">
+                                <img height="150" src="../project/powerflex_755T/hpc_control_frame.jpg" alt="Demo Inverter at Carrier Facility">
+
+                                <!-- <video class="video" height="150" controls>
+                                    <source src="../project/powerflex_755T/inverter_by_chiller.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <video class="video" height="150" controls>
+                                    <source src="../project/powerflex_755T/inverter_on_chiller.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video> -->
+                            </div>
+                            
+                            <div class="clearboth"></div>
+                        </div>
+                        
+                        <h3>Tools</h3>
+                        <ul>
+                            <li>Project management: Scale Agile Framework(SAFe)</li>
+                            <p style="text-indent:40px">Sprint Planning, Sprint Review, Agile Release Train</p>
+                            <li>DevOps</li>
+                            <p style="text-indent:40px">Python Build Machine, Git Repository, Teamcity CI/CD, JFrog Artifactory, Build Promotion, Smoke Test</p>
+                            <li>Matlab Model Based Design</li>
+                            <p style="text-indent:40px"></p>
+                        </ul>
                     </section>
 
                     <section id="publications" class="section">
@@ -120,12 +230,15 @@
 
                 <footer class="footer">
                     <p>You can reach me at: zhdzhang@gmail.com</p>
-                    <p>&copy; 2024 Sakuragi - Personal Website</p>
+                    <p>&copy; 2024 - Personal Website</p>
                 </footer>
 
             </div>
         </div>
     </div>
+
+    <script src="script.js">
+    </script>
 </body>
 
 </html>

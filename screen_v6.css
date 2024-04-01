@@ -31,6 +31,11 @@ body {
 }
 ol, ul {
     list-style: none;
+	text-align: justify;
+}
+
+p {
+	text-align: justify;
 }
 /* tables still need 'cellspacing="0"' in the markup */
 table {
@@ -328,6 +333,10 @@ span.emhover:hover span.emhover3 {
 	background-color: #dfd;
 }
 
+
+/****** Experience ******/
+/* div. */
+
 /****** Projects ******/
 div.project-teaser {
 	clear: both;
@@ -362,6 +371,43 @@ div.project-teaser div.text h3.authors {
 div.project-teaser div.text h3.authors:hover {
 	color: #888;
 }
+
+div.project-teaser div.subimage {
+	clear: both;
+	/* float: left; */
+	display: flex;
+
+	justify-content: center;
+	align-items: center;
+	/* width: 5px; */
+}
+
+div.project-teaser div.subimage img{
+	margin-left: 10px;
+	margin-right: 10px;
+
+	transition: transform .2s;
+	/* width: 550px; */
+
+}
+
+div.project-teaser div.subimage img:hover{
+	transform:scale(2.5);
+}
+
+
+div.project-teaser div.subimage video{
+	margin-left: 10px;
+	margin-right: 10px;
+
+	transition: transform .2s;
+}
+
+div.project-teaser div.subimage video:hover{
+	transform:scale(2.5);
+}
+
+
 #bodyer #content div.project-teaser div.text p {
 	font-size: 16px;
 	margin: 0;
