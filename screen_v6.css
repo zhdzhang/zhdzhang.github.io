@@ -49,6 +49,23 @@ blockquote, q {
     quotes: "" "";
 }
 
+img {
+
+	clear: both;
+	/* float: left; */
+	/* display: flex; */
+
+	/* justify-content: center; */
+	/* align-items: center; */
+
+	width: 400px;
+
+
+
+	margin-left: 10px;
+	margin-right: 10px;
+
+}
 
 
 /*******************
