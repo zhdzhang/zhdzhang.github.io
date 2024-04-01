@@ -49,16 +49,24 @@ blockquote, q {
     quotes: "" "";
 }
 
-img {
 
+div.pubs{
 	clear: both;
 	/* float: left; */
-	/* display: flex; */
+	display: flex;
 
-	/* justify-content: center; */
-	/* align-items: center; */
+	justify-content: center;
+	align-items: center;
 
-	width: 400px;
+	width: 100%;
+
+}
+
+div.pubs img {
+
+
+
+	width: 30%;
 
 
 
