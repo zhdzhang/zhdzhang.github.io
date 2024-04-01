@@ -57,18 +57,14 @@ div.pubs{
 
 	justify-content: center;
 	align-items: center;
-
-	width: 100%;
+	float: left;
+	width: 50%;
 
 }
 
 div.pubs img {
 
-
-
-	width: 30%;
-
-
+	width: 80%;
 
 	margin-left: 10px;
 	margin-right: 10px;
