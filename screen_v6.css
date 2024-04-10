@@ -55,6 +55,27 @@ blockquote, q {
 }
 
 
+div.pubs{
+	clear: both;
+	/* float: left; */
+	display: flex;
+
+	justify-content: center;
+	align-items: center;
+	float: left;
+	width: 50%;
+
+}
+
+div.pubs img {
+
+	width: 80%;
+
+	margin-left: 10px;
+	margin-right: 10px;
+
+}
+
 
 /*******************
 * Global
