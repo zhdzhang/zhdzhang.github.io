@@ -272,6 +272,7 @@ p.story {
 	clear: both;
 	padding: 25px 0;
 }
+
 #index h2 {
 	background-color: #dfd;
 	border-bottom: 2px solid #5a5;
@@ -279,21 +280,30 @@ p.story {
 	margin: 1.8em 0 1em;
 	font-weight: 400;
 }
+
 #index h2 span.h2link a {
 	font-size: 60%;
 	float: right;
 	padding: .4em;
 	border: none;
 }
+
 #index h2 span.h2link a:hover {
 	background-color: #5a5;
 	color: #dfd;
 }
 
-/* .navbar {
+a:hover {
+	background-color: #5a5;
+	color: #dfd;
+}
+
+#index .navbar {
 	background-repeat: no-repeat;
-	height: 70px;
-} */
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
 
 #index .navbar ul {
 	list-style-type: none;
@@ -303,6 +313,10 @@ p.story {
 
 #index .navbar li {
 	float: left;
+}
+
+#index .navbar a {
+	text-align: center;
 }
   
 /* #index .navbar  a {
@@ -335,14 +349,46 @@ span.emhover:hover span.emhover3 {
 
 
 /****** Experience ******/
-/* div. */
-
-/****** Projects ******/
-div.project-teaser {
+div.experience-teaser {
 	clear: both;
 	padding-bottom: .75em;
 	margin-bottom: 30px;
 }
+
+div.experience-teaser div.logo {
+	float: left;
+	width: 15%;
+}
+
+div.experience-teaser div.logo img {
+	width: 100%;
+}
+
+/* div.experience-teaser h3 {
+	float: right;
+	width: 59%;
+} */
+
+div.experience-teaser div.text {
+	margin: 10px 10px;
+	line-height: 1.4;
+}
+
+div.experience-teaser p {
+	padding-bottom: 15px;
+}
+
+
+/****** Projects ******/
+
+/* div.project-teaser div.text span.h2link a {
+	font-size: 60%;
+	float: right;
+	padding: .4em;
+	border: none;
+} */
+
+
 div.project-teaser div.image {
 	float: left;
 	width: 39%;
@@ -356,6 +402,7 @@ div.project-teaser div.image img {
 div.project-teaser div.text {
 	float: right;
 	width: 59%;
+	line-height: 1.4;
 }
 div.project-teaser div.text h3 {
 	font-size: 22px;
@@ -363,7 +410,7 @@ div.project-teaser div.text h3 {
 }
 div.project-teaser div.text h3.authors {
 	font-size: 15px;
-        font-weight: 400;
+    font-weight: 400;
 	color: #ccc;
 	line-height: 1.4;
         /*margin-top: 5px;*/
@@ -372,38 +419,79 @@ div.project-teaser div.text h3.authors:hover {
 	color: #888;
 }
 
-div.project-teaser div.subimage {
+div.project-teaser div.picture, div.video {
 	clear: both;
 	/* float: left; */
 	display: flex;
 
 	justify-content: center;
-	align-items: center;
+	/* vertical-align: center; */
+
+	margin: 5px 0;
 	/* width: 5px; */
 }
 
-div.project-teaser div.subimage img{
-	margin-left: 10px;
-	margin-right: 10px;
+div.picture img{
+
+
+	/* justify-content: center;
+	align-items: center; */
+
+	box-shadow: 2px 2px 5px 0px #000;
+
 
 	transition: transform .2s;
 	/* width: 550px; */
 
 }
 
-div.project-teaser div.subimage img:hover{
+div.project-teaser div.picture img:hover{
 	transform:scale(2.5);
 }
 
 
-div.project-teaser div.subimage video{
-	margin-left: 10px;
-	margin-right: 10px;
+/* div.project-teaser div.picture figure {
+	display: table-cell;
+	width: 20%
+}
 
+div.project-teaser div.picture img, figcaption {
+
+	margin: 5px 10px;
+
+	display: table-row;
+	vertical-align: bottom;
+}
+
+div.project-teaser div.picture figcaption {
+	padding-left: 4px;
+	text-align: center;
+	display: table-row;
+	vertical-align: bottom;
+} */
+
+/* div.project-teaser div.video {
+	clear: both;
+	/* float: left; */
+	/* display: flex; */
+
+	/* justify-content: center; */
+	/* vertical-align: center; */
+
+	/* margin: 5px 0; */
+	/* width: 5px; */
+/* }  */
+
+div.project-teaser div.video video{
+	/* margin-left: 10px;
+	margin-right: 10px; */
+
+	box-shadow: 2px 2px 5px 0px #000;
+	
 	transition: transform .2s;
 }
 
-div.project-teaser div.subimage video:hover{
+div.project-teaser div.video video:hover{
 	transform:scale(2.5);
 }
 
@@ -415,7 +503,7 @@ div.project-teaser div.subimage video:hover{
 	line-height: 1.4;
 }
 #bodyer #content div.project-teaser div.text p.header {
-        margin-bottom: 1.0em;
+    margin-bottom: 1.0em;
 }
 
 /****** Publications ******/
@@ -449,6 +537,7 @@ ol.publist div.bib {
 
 ol.publist li div.paperthumb {
 }
+
 ol.publist li a.imglink,
 ol.publist li div.non-imglink {
 	float: left;

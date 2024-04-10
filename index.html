@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zhendong - Personal Website</title>
     <link rel="stylesheet" type="text/css" media="screen" href="screen_v6.css">
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script>
+    <script type="text/javascript" src="../jquery.min.js"></script>
+    <script type="text/javascript" src="../jquery.hotkeys.js"></script>
+    <script type="text/javascript" src="../picScroll.js"></script>
 </head>
 
 <body class="W3C">
@@ -31,65 +37,161 @@
                     </div>
         
                     <div class="right">
-                        <p><a href="https://windscape.ai/">Hello</a></p>
-                        <p><a href="http://mlcollective.org/">Hello</a></p>
-                        <p><a class="email" href="mailto:__ja_Take_This_Out_son__@yosinski.com"><span class="b">__</span><span class="c">ja</span><span class="d">_Tak</span><span class="e">e_T</span><span class="f">his_o</span><span class="g">ut_</span>
-                            <span class="h">s</span>
-                            <span class="i">on</span>
-                            <span class="j">__</span>
-                            <span class="k">@</span>
-                            <span class="l">yosinski.com</span>
-                            </a>
+                        <a href="https://www.linkedin.com/in/zhendong-zhang-61897611/"><img height="30" src="materials/logo/linkedin_logo.png"></a>
+                        <a href="https://www.facebook.com/ZhendongZhang"><img height="30" src="materials/logo/facebook_logo.png"></a>
+                        <p>
+                            <a class="email" href="mailto:zhendong.zhang@ieee.org">zhendong.zhang@ieee.org</a>
                         </p>
                     </div>
                 </div>
 
-                <nav class="navbar">
+                <nav class="navbar" id="navbar">
                     <ul>
                         <li><a href="#about">About</a></li>
                         <li><a href="#experience">Experience</a></li>
-                        <li><a href="#project">Research</a></li>
+                        <li><a href="#project">Project</a></li>
                         <li><a href="#publications">Publications</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#Recognition">Recognition</a></li>
                     </ul>
                 </nav>
 
                 <main class="main-content">
                     <section id="about" class="section">
                         <h2>About Me</h2>
-                        <ul>
-                            <li>A self-motivated, deeply engineering focused, and intensely curious engineer who is strong at knowledge summarizing and analogical reasoning.</li>
-                            <li>Full servo drive motion control development: feedback & feedforward control, PID control with pole placement, disturbance rejection (compliance, gear backlash), load adaptation and resonance mitigation using load observer, full servo loop frequency analysis, path planning such as position interpolation, Point-to-Point move, etc</li>
-                            <li>15+ years of hands-on experience with Matlab, Simulink, Model-Based-Design autocode generation, c embedded, physical electro-mechanical system modeling and simulation, motor control power electronics system development including sensorless control, PWM modulation for power converters, drive protection, etc.</li>
-                            <li>knowledge about drive thermal protection, which includes inverter thermal loss calculation, junction temperature prediction, current limit value or PWM frequency fold back, power cycling and thermal cycling, etc.</li>
-                            <li>Comprehensive job experience with project management tools such as SAFe Agile, JIRA, JAMA, and software development tools such as GitLab, CI/CD teamcity, binary publish JFrog Artifactory, etc</li>
-                        </ul>
-
-                        <p class="center"><a href="#navbar">Navigation</a></p>
+                        <p class="story">
+                            Hello, this is Zhendong Zhang.  I am an firmware engineer that develop real-time control algorithm for electric machine in various applications such as servo motion system, vehicle electrification.
+                            My backgroud is about the eletromagnetic analysis of electric machine, power electronics converter control and analysis, different control loop bandwidth analysis, etc.
+                            loop analysis.
+                        </p>
+                        
+                        <p class="story">
+                            I received my Ph.D. degree in EE at Ohio State University. 
+                        </p>
                     </section>
 
                     <section id="experience" class="section">
                         <h2>Experience</h2>
-                        <h3>United Technology Research Center</h3>
+                        <!-- <script>
+                            $(document).ready(function () {
+                                $("a.reference").click(function(){
+                                    $(this).nextAll("div.reference").slideToggle("fast");
+                                    return false;
+                                });
+                            });
+                        </script> -->
 
-                        <div class="image">
-                            <img style="width:50%; display:flex; justify-content: center; align-items: center;" src ="../materials/pictures/divider.PNG">
+
+                        <div class="experience-teaser">
+                            <div class="logo">
+                                <img src="materials/logo/logo_utrc.jpg">
+                            </div>
+
+                            <div class="clearboth"></div>
+
+                            <div class="text">
+                                <p> I worked at UTRC as an research internal engineer from Feb, 2013 to Aug, 2013. My main job responsibility is to assist the magnetic bearing project for high speed chiller.
+                                    I learned the physical modeling of 5-DOF magnetic bearing system. I also implemented a system identification algorithm to commission the system parameters using adaptive filter. </p>
+
+                            </div>
+
+
+                            <a class="reference" href="#">reference▾</a>
+
+                            <div class="reference" style="display: none;">
+                                <ul>
+                                    <li><a href="https://ieeexplore.ieee.org/author/37351971700">Vlado Blasko</a></li>
+                                    <li><a href="https://ieeexplore.ieee.org/author/37294745600">Parag Kshirsagar</a></li>
+                                    <li><a href="https://ieeexplore.ieee.org/author/37085776103">Dong Jiang</a></li>
+                                </ul>
+                            </div>
+
                         </div>
-                        <h3>Rockwell Automation:</h3>
-                        <p> I worked at Rockwell Automation from 2013 ~ 2022.  Rockwell Automation is the craddle for modern industrial drives, which includes motor control and power electronics.</p>
-                        <p> worked with a group of most experienced but super humble and nice engineers. They not only teach me about the knowledges, but also show me the merits of elegent gentleman.</p>
-                        <p class="header">
-                            <a href="https://ieeexplore.ieee.org/author/37351279000">Timothy Rowan</a>
-                            <a href="https://ieeexplore.ieee.org/author/37085563020">Takayoshi Matsuo</a>
-                            <a href="https://ieeexplore.ieee.org/author/37351277700">Brian Seibel</a>
-                            <a href="https://ieeexplore.ieee.org/author/37351277700">John </a>
-                        </p>
+
+                        <hr>
+                        
+                        <div class="experience-teaser">
+                            <div class="logo">
+                                <img src="materials/logo/Rockwell_Automation_Logo.jpg">
+                            </div>
+
+                            <div class="clearboth"></div>
+
+                            <div class="text">
+                                <p> I worked at Rockwell Automation from Sep, 2013 to Aug, 2022, first as senior firmware engineer, then project firmware engineer, and later as senior project firmware engineer.</p>
+                                <p> I mainly involed in three major projects: 1) PF527 component drive; 2) PF755T high performance drive; and 3) Carrier high speed chiller drive.</p>
+
+                                <p> I helped to develop the latest Rockwell drive product using MATLAB/model based design technology. I has involved in a series algorithm development such as:</p>
+                                <p> Most important: Under the business cultural framework - "WE ARE ONE, SPEED, INNOVATION, and ACT LIKE AN OWNER". I have worked with a group of experiencedk hardworking, and super hubble engineers. They not only teach me about the knowledges, but also show me the merits of being elegent gentleman.
+                                    The management team sets up an group vide that each engineer is respected and they always try their best to service the needs of individual engineer, for both the life and work.
+                                </p>
+
+                                <a class="reference" href="#">reference▾</a>
+
+                                <div class="reference" style="display: none;">
+                                    <ul>
+                                    <li><a href="https://ieeexplore.ieee.org/author/37351279000">Timothy Rowan</a></li>
+                                    <li><a href="https://ieeexplore.ieee.org/author/37085563020">Takayoshi Matsuo</a></li>
+                                    <li><a href="https://ieeexplore.ieee.org/author/37351277700">Brian Seibel</a></li>
+                                    <li><a href="https://ieeexplore.ieee.org/author/37351277700">John Golownia</a></li>
+                                    <li><a href="https://ieeexplore.ieee.org/author/37348384900">David Leggate</a></li>
+                                    <li><a href="https://ieeexplore.ieee.org/author/37348384900">Robert de Lange</a></li>
+                                    <li><a href="https://ieeexplore.ieee.org/author/37348384900">Robert Miklosovic</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
 
                         <p class="center"><a href="#navbar">Navigation</a></p>
                     </section>
 
                     <section id="project" class="section">
-                        <h2>Projects<span font-size="100%">(Embedded Firmware Developoment)</span></h2>
+                        <h2>Projects<span style="font-size:50%;">(Embedded Firmware Developoment)</span></h2>
+
+                        <!-- <script type="text/javascript">
+                            $(document).ready(function () {
+                                $("a.picture").click(function(){
+                                    // nextAll function in jQuery only find the next sibling(same level) element
+                                    $(this).nextAll("div.picture").slideToggle("fast");
+                                    return false;
+                                });
+
+                                $("a.video").click(function(){
+                                    $(this).nextAll("div.video").slideToggle("fast");
+                                    return false;
+                                });
+                            });
+                        </script> -->
+
+                        
+                        <script type="text/javascript">
+                            $(document).ready(function () {
+
+                                $("a.picture").click(function(){
+                                    // nextAll function in jQuery only find the next sibling(same level) element
+                                    $(this).nextAll("div.video").slideUp("fast");
+                                    $(this).nextAll("div.recognition").slideUp("fast");
+                                    $(this).nextAll("div.picture").slideToggle("fast");
+                                    return false;
+                                });
+
+                                $("a.video").click(function(){
+                                    // nextAll function in jQuery only find the next sibling(same level) element
+                                    $(this).nextAll("div.picture").slideUp("fast");
+                                    $(this).nextAll("div.recognition").slideUp("fast");
+                                    $(this).nextAll("div.video").slideToggle("fast");
+                                    return false;
+                                });
+
+                                $("a.recognition").click(function(){
+                                    // nextAll function in jQuery only find the next sibling(same level) element
+                                    $(this).nextAll("div.picture").slideUp("fast");
+                                    $(this).nextAll("div.video").slideUp("fast");
+                                    $(this).nextAll("div.recognition").slideToggle("fast");
+                                    return false;
+                                });
+                            });
+                        </script>
 
                         <!-- Rockwell Carrier Polaris -->
                         <div class="project-teaser">
@@ -107,28 +209,73 @@
                                 </p>
                         
                                 <p>
-                                    In recent years, the HVAC industry is going greener by adopting eco-friendly solutions. Variable speed drives (VFD), being the core part of the system, is supposed to run a machine to super-high-speed, with extreme-high-efficiency, and feed minimum-harmonics to the grid. Conventional VFD system with six-pulse front end structure, induction machine, and speed boost gearbox can no longer satisfy these requirements. In this paper, a turbo-compressor chiller equipped with a high-speed hermetic IPM motor and Rockwell’s latest PowerFlex 755T active front end (AFE) drive technology is introduced.  Position sensorless control is achieved in full speed range including compressor high dynamic conditions such as surge and power loss. 
+                                    In recent years, the HVAC industry is going greener by adopting eco-friendly solutions. Variable speed drives (VFD), being the core part of the system, is supposed to run a machine to super-high-speed, with extreme-high-efficiency, and feed minimum-harmonics to the grid. Conventional VFD system with six-pulse front end structure, induction machine, and speed boost gearbox can no longer satisfy these requirements. In this project, a turbo-compressor chiller equipped with a high-speed hermetic IPM motor and Rockwell’s latest PowerFlex 755T active front end (AFE) drive technology is introduced.  Position sensorless control is achieved in full speed range including compressor high dynamic conditions such as surge and power loss.
+                                </p>
+
+                                <p>
+                                    I am the control firmware lead on this project. Iam responsible to modify and iterate the firmware to drive a high speed IPM motor. Successfully win the large order from one of
+                                    the biggest HVAC customer. Design sensorless algorithm using High Frequency Injection(HFI) at low speed and synchronous
+                                    frame back-EMF at high speed to demonstrate stable operation across various points on compressor map including compressor
+                                    surge points
+                                </p>
+                                
                                     <a href="/convergent">Read more »</a>
                                 </p>
                             </div>
+                            <div class="clearboth"></div>
 
-                            <div class="subimage">
-                                <img height="150" src="../project/high_speed_hvac/RA_mequon_manufacture.jpg" alt="Inverter in Rockwell Factory">
-                                <img height="150" src="../project/high_speed_hvac/carrier_with_ra_drive.jpg" alt="Demo Inverter at Carrier Facility">
 
-                                <video class="video" height="150" controls>
+                            <a class="picture" href="#">picture▾</a> |
+                            <a class="video" href="#">video▾</a>
+
+                            <div class="picture" style="display: none;">
+
+                                <figure>
+                                    <img height="150" src="../project/high_speed_hvac/RA_mequon_manufacture.jpg" alt="Inverter in Rockwell Factory">
+                                    <figcaption>drive testing in RA factory</figcaption>
+                                </figure>
+
+                                <figure>
+                                    <img height="150" src="../project/high_speed_hvac/carrier_with_ra_drive1.jpg" alt="Demo Inverter at Carrier Facility">
+                                    <figcaption>chiller bring up with RA drive at Carrier</figcaption>
+                                </figure>
+
+                                <figure>
+                                    <img height="150" src="../project/high_speed_hvac/carrier_with_ra_drive2.jpeg" alt="Demo Inverter at Carrier Facility">
+                                    <figcaption>chiller bring up with RA drive at Carrier</figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="video" style="display: none;">
+
+                                <figure>
+                                    <video class="videoclip" height="150" src="../project/high_speed_hvac/inverter_by_chiller.mp4" type="video/mp4"></video>
+                                    <figcaption>RA universal drive testing </figcaption>
+                                </figure>
+                                <figure>
+                                    <video class="videoclip" height="150" src="../project/high_speed_hvac/inverter_on_chiller.mp4" type="video/mp4"></video>
+                                    <figcaption>Polaris layout drive testing</figcaption>
+                                </figure>
+                            </div>
+
+                            <!-- <div class="video" style="display: none;">
+                                <video class="videoclip" height="150" controls>
                                     <source src="../project/high_speed_hvac/inverter_by_chiller.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
+                                    <figcaption>drive testing in RA factory</figcaption>
                                 </video>
-                                <video class="video" height="150" controls>
+                                <video class="videoclip" height="150" controls>
                                     <source src="../project/high_speed_hvac/inverter_on_chiller.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
-                            </div>
+                            </div> -->
+
                             
                             <div class="clearboth"></div>
                         </div>
                         
+                        <hr>
+
                         <!-- Rockwell PowerFlex 755T -->
                         <div class="project-teaser">
                             <div class="image">
@@ -145,33 +292,62 @@
                                 </p>
                         
                                 <p>
-                                    Involving in the Rockwell Automation Next Generation High performance controller (755T series) using model based design technology. 
+                                    Rockwell Automation Next Generation High performance controller (755T series) development. The new drive series has three major offering, the 755TM for
+                                    common bus application, the 755TL for low harmonic application, and the 755TR for energy regeneration. For the drive firmware, it adopts the latest
+                                    model based design technology based on MATLAB/SIMULINK platform.  My daily tasks are model design review, model code review, model unit test, report generation,
+                                    as well as model validation on the dyno.
+                                    <!-- <br>
+                                    <ol>
+                                        <li> ◦ Servo Motion Control: learn and implement various servo control modules such as point to point path planning, s-curve,
+                                            position loop, velocity loop, droop control, load observer, filters & digitization, phase delay analysis, resonance analysis &
+                                            mitigation, input shaping, looping shaping, two mass system compliance and backlash modeling, performance benchmark by
+                                            frequency analysis, and bumpless transition between different control modes, liquid sloshing & inverted pendulum problems
+                                        </li>
+                                        <li>◦ Electromagnetic Control: induction machine modeling and control, PM machine modeling and control, synchronous
+                                            reluctance machine modeling and control, machine parameter autotune, current loop gains setting, PWM modulator, encoder
+                                            loss detection, power loss & ride through, long cable reflected wave mitigation, velocity ramp profile generation, cubic spline
+                                            based PM rotor initial angle detection, sensorless control with back-EMF and high frequency injection.
+                                        </li>
+                                        <li>◦ Software Development Standardization Process: adopting V-shape development process, which includes function requirement,
+                                            design review, code review, unit test, integration test, report generation, naming convention, static code analysis
+                                            tools(MISRA-C, MAAB, dead logic, divide by zero check, PC-Lint, Doxygen). Repository management
+                                        </li>
+                                    </ol> -->
+                                    <br>
                                     <a href="/convergent">Read more »</a>
                                 </p>
                             </div>
+                            <div class="clearboth"></div>
+                            <a class="picture" href="#">picture▾</a> |
+                            <a class="video" href="#">video▾</a>
 
-                            <div class="subimage">
-                                <img height="150" src="../project/powerflex_755T/hpc_outside.jpg" alt="Inverter in Rockwell Factory">
-                                <img height="150" src="../project/powerflex_755T/hpc_control_frame.jpg" alt="Demo Inverter at Carrier Facility">
+                            <div class="picture" style="display: none;">
 
-                                <!-- <video class="video" height="150" controls>
-                                    <source src="../project/powerflex_755T/inverter_by_chiller.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <video class="video" height="150" controls>
-                                    <source src="../project/powerflex_755T/inverter_on_chiller.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video> -->
+                                <figure>
+                                    <img height="150" src="../project/powerflex_755T/back-to-back AFE drive.jpg" alt="Inverter in Rockwell Factory">
+                                    <figcaption>drive testing in RA factory</figcaption>
+                                </figure>
 
+                                <figure>
+                                    <img height="150" src="../project/powerflex_755T/testing_dyno.jpg" alt="Demo Inverter at Carrier Facility">
+                                    <figcaption>chiller bring up with RA drive at Carrier</figcaption>
+                                </figure>
+
+                                <figure>
+                                    <img height="150" src="../project/powerflex_755T/drive_testing.JPG" alt="Demo Inverter at Carrier Facility">
+                                    <figcaption>chiller bring up with RA drive at Carrier</figcaption>
+                                </figure>
                             </div>
                             
                             <div class="clearboth"></div>
                         </div>
 
+                        <hr>
+
                         <!-- Rockwell PowerFlex 527 -->
                         <div class="project-teaser">
                             <div class="image">
-                                <a href="https://www.rockwellautomation.com/en-us/products/hardware/allen-bradley/drives/low-voltage-ac-drives/architecture-drives/20g-powerflex-755t.html">
+                                <a href="https://www.rockwellautomation.com/en-us/products/hardware/allen-bradley/drives/low-voltage-ac-drives/compact-drives/25c-powerflex-527.html">
                                     <img src="../project/powerflex_527/pf527_photo.jpg" alt="PowerFlex 527">
                                 </a>
                             </div>
@@ -180,16 +356,16 @@
                                 <h3>PowerFlex 527 Cip Motion Drive</h3>
                                 <!-- <h3 class="authors">Yixuan Li, Jason Yosinski, Jeff Clune, Hod Lipson, and John Hopcroft</h3> -->
                                 <p class="header">
-                                    <a href="https://www.youtube.com/watch?v=jz4sO0rEYaM">Youtube Video</a>
+                                    <a href="https://www.youtube.com/watch?v=6-rVf8x9MmY">Youtube Video</a>
                                 </p>
                         
                                 <p>
-                                    Involving in the Rockwell Automation Next Generation High performance controller (755T series) using model based design technology. 
+                                    PowerFlex 527 is the component class drive with CIP motion only capability on Rockwell drive portfolio. 
                                     <a href="/convergent">Read more »</a>
                                 </p>
                             </div>
 
-                            <div class="subimage">
+                            <div class="subimage" style="display: none;">
                                 <img height="150" src="../project/powerflex_755T/hpc_outside.jpg" alt="Inverter in Rockwell Factory">
                                 <img height="150" src="../project/powerflex_755T/hpc_control_frame.jpg" alt="Demo Inverter at Carrier Facility">
 
@@ -206,6 +382,8 @@
                             <div class="clearboth"></div>
                         </div>
                         
+                        <hr>
+                        
                         <h3>Tools</h3>
                         <ul>
                             <li>Project management: Scale Agile Framework(SAFe)</li>
@@ -213,23 +391,245 @@
                             <li>DevOps</li>
                             <p style="text-indent:40px">Python Build Machine, Git Repository, Teamcity CI/CD, JFrog Artifactory, Build Promotion, Smoke Test</p>
                             <li>Matlab Model Based Design</li>
-                            <p style="text-indent:40px"></p>
+                            <p style="text-indent:40px">High Level Design Document, Modularized architecture(shared modules vs project specific module), Naming Convention, Model development review, model code review, model static check, Unit test, test report generation</p>
                         </ul>
+
+                        <p class="center"><a href="#navbar">back to top </a></p>
                     </section>
 
                     <section id="publications" class="section">
-                        <h2>Publications</h2>
-                        <p>Insert your publications list here.</p>
+                        <h2>
+                            Publications
+                            <span class="h2link"><a href="/papers">more »</a></span>
+                        </h2>
+
+                        <!-- <script type="text/javascript">
+                            $(document).ready(function () {
+                                $("a.abstract").click(function(){
+                                    // nextAll function in jQuery only find the next sibling(same level) element
+                                    $(this).nextAll("div.abstract").slideToggle("fast");
+                                    return false;
+                                });
+                                $("a.bib").click(function(){
+                                    $(this).nextAll("div.bib").slideToggle("fast");
+                                    return false;
+                                });
+
+                                $("a.reference").click(function(){
+                                    $(this).nextAll("div.reference").slideToggle("fast");
+                                    return false;
+                                });
+                            });
+                        </script> -->
+
+                        <ol class="publist">
+                            <!-- paper 1 -->
+                            <li>
+                                <a href="paper\Sensorless_Back_EMF_Based_Control_of_Synchronous_PM_and_Reluctance_Motor_DrivesA_Review.pdf" class="imglink"><img src="../paper//Sensorless_Back_EMF_Based_Control_of_Synchronous_PM_and_Reluctance_Motor_DrivesA_Review_Page_01.png" alt="first page of paper">
+                                    <br>
+                                    (pdf)
+                                </a>
+                                
+                                <div class="nonthumb">
+                                    Zhendong Zhang.
+                                    <span class="title"><a href="paper\Sensorless_Back_EMF_Based_Control_of_Synchronous_PM_and_Reluctance_Motor_DrivesA_Review.pdf">Sensorless Back EMF Based Control of Synchronous PM and Reluctance Motor Drives—A Review</a></span>.
+                                    IEEE Trans. Power Electron., vol. 37, no. 9, pp. 10290–10305, Sep. 2022.
+                                    <br>
+
+                                    <a class="abstract" href="#">abstract▾</a> |
+                                    <a class="bib" href="#">bib▾</a>
+                                    
+                                    <div class="abstract" style="display: none;">
+                                        <p>This paper reviews the state-of-the-art back-EMF based sensorless schemes for synchronous machines. Field oriented control (FOC) of a synchronous machine requires real time rotor position for decoupled torque and flux control. Extraction of rotor position without sensor or sensorless control has been an enabling technology for the past few decades. Sensorless control using back-EMF voltage induced by rotor movement is the most widely used method. However, the connections and differences between different methods has not been thoroughly investigated and documented. This paper first reviews basic sensorless methods. The two implementation forms of observer are examined to facilitate analysis. A detailed analysis puts in evidence the connections behind different methods in both stationary and synchronous reference frames. A summary is drawn that is meant to offer few key points regarding different sensorless methods. Finally, a conclusion is given to summarize the major contributions of this paper.</p>
+                                    </div>
+                                    
+                                    <div class="bib" style="display: none;">
+                                        <pre>@inproceedings{Zhendong Zhang_2022_PELS
+                                            title={Sensorless Back EMF Based Control of Synchronous PM and Reluctance Motor Drives—A Review},
+                                            author={Zhendong Zhang},
+                                            booktitle={IEEE Trans. Power Electron., vol. 37, no. 9},
+                                            editor = {Z. Ghahramani and M. Welling and C. Cortes and N.D. Lawrence and K.Q. Weinberger},
+                                            publisher = {IEEE.},
+                                            pages = {10290--10305},
+                                            year={2022}
+                                            }
+                                        </pre>
+                                    </div>
+
+                                    <div class="clearboth"></div>
+                                </div>
+                            </li>
+
+                            <!-- paper 2 -->
+                            <li>
+                                <a href="paper\Industrial_Inverter_Current_Sensing_with_Three_Shunt_Resistors_Limitations_and_Solutions.pdf" class="imglink"><img src="paper\Industrial_Inverter_Current_Sensing_with_Three_Shunt_Resistors_Limitations_and_Solutions_Page_01.png" alt="first page of paper">
+                                    <br>
+                                    (pdf)
+                                </a>
+                                
+                                <div class="nonthumb">
+                                    Zhendong Zhang, David Leggate, Takayoshi Matsuo.
+                                    <span class="title"><a href="paper\Industrial_Inverter_Current_Sensing_with_Three_Shunt_Resistors_Limitations_and_Solutions.pdf">Industrial inverter current sensing with three shunt resistors: Limitations and solutions</a></span>.
+                                    IEEE Trans. Power Electron., vol. 32, no. 6, pp. 4577–4586, Jun. 2017.
+                                    <br>
+
+                                    <a class="abstract" href="#">abstract▾</a> |
+                                    <a class="bib" href="#">bib▾</a>
+                                    
+                                    <div class="abstract" style="display: none;">
+                                        <p>This paper reviews the state-of-the-art back-EMF based sensorless schemes for synchronous machines. Field oriented control (FOC) of a synchronous machine requires real time rotor position for decoupled torque and flux control. Extraction of rotor position without sensor or sensorless control has been an enabling technology for the past few decades. Sensorless control using back-EMF voltage induced by rotor movement is the most widely used method. However, the connections and differences between different methods has not been thoroughly investigated and documented. This paper first reviews basic sensorless methods. The two implementation forms of observer are examined to facilitate analysis. A detailed analysis puts in evidence the connections behind different methods in both stationary and synchronous reference frames. A summary is drawn that is meant to offer few key points regarding different sensorless methods. Finally, a conclusion is given to summarize the major contributions of this paper.</p>
+                                    </div>
+                                    
+                                    <div class="bib" style="display: none;">
+                                        <pre>@inproceedings{Zhendong Zhang_2022_PELS
+                                            title={Industrial inverter current sensing with three shunt resistors: Limitations and solutions},
+                                            author={Zhendong Zhang, Dave Leggate, Takayoshi Matsuo},
+                                            booktitle={IEEE Trans. Power Electron., vol. 37, no. 9},
+                                            editor = {Z. Ghahramani and M. Welling and C. Cortes and N.D. Lawrence and K.Q. Weinberger},
+                                            publisher = {IEEE.},
+                                            pages = {10290--10305},
+                                            year={2022}
+                                            }
+                                        </pre>
+                                    </div>
+
+                                    <div class="clearboth"></div>
+                                </div>
+                            </li>
+
+                            <!-- paper 3 -->
+                            <li>
+                                <a href="paper\Dead-Time_Compensation_of_Inverters_Considering_Snubber_and_Parasitic_Capacitance.pdf" class="imglink"><img src="paper\Dead-Time_Compensation_of_Inverters_Considering_Snubber_and_Parasitic_Capacitance_Page_01.png" alt="first page of paper">
+                                    <br>
+                                    (pdf)
+                                </a>
+                                
+                                <div class="nonthumb">
+                                    Zhendong Zhang, Longya Xu
+                                    <span class="title"><a href="paper\Dead-Time_Compensation_of_Inverters_Considering_Snubber_and_Parasitic_Capacitance.pdf">Dead-Time Compensation of Inverters Considering Snubber and Parasitic Capacitance</a></span>.
+                                    IEEE Trans. Power Electron., vol. 29, no. 6, pp. 3179-3187, 2014.
+                                    <br>
+
+                                    <a class="abstract" href="#">abstract▾</a> |
+                                    <a class="bib" href="#">bib▾</a>
+                                    
+                                    <div class="abstract" style="display: none;">
+                                        <p>In power electronics drive systems, dead time is used
+                                            to prevent shoot-through over power devices. However, dead time
+                                            can lead to distortion of ac output voltages and currents. Various
+                                            compensationmethods have been proposed to overcome this drawback.
+                                            However, most strategies assume the power switches as ideal
+                                            switches and the transition from ON to OFF or vice versa is infinitely
+                                            fast. In this paper, effects of inverter snubber and parasitic
+                                            capacitance to the switching instants are investigated when doing
+                                            dead-time compensation. A new dead-time compensation method
+                                            is presented with the capacitance being considered. It is verified
+                                            that the compensation becomesmore accurate and effective for the
+                                            specific application after the modification. It is also shown that the
+                                            proposed compensation can make the inverter system stable and
+                                            robust. This proposed approach is validated by the experimental
+                                            results.</p>
+                                    </div>
+                                    
+                                    <div class="bib" style="display: none;">
+                                        <pre>@inproceedings{Zhendong Zhang_2022_PELS
+                                            title={Industrial inverter current sensing with three shunt resistors: Limitations and solutions},
+                                            author={Zhendong Zhang, Dave Leggate, Takayoshi Matsuo},
+                                            booktitle={IEEE Trans. Power Electron., vol. 37, no. 9},
+                                            editor = {Z. Ghahramani and M. Welling and C. Cortes and N.D. Lawrence and K.Q. Weinberger},
+                                            publisher = {IEEE.},
+                                            pages = {10290--10305},
+                                            year={2022}
+                                            }
+                                        </pre>
+                                    </div>
+
+                                    <div class="clearboth"></div>
+                                </div>
+                            </li>
+
+                            <!-- paper 4 -->
+                            <li>
+                                <a href="paper\Active_Q_Flux_Concept_for_Sensorless_Control_of_Synchronous_Reluctance_Machines.pdf" class="imglink"><img src="paper\Active_Q_Flux_Concept_for_Sensorless_Control_of_Synchronous_Reluctance_Machines_Page_01.png" alt="first page of paper">
+                                    <br>
+                                    (pdf)
+                                </a>
+                                
+                                <div class="nonthumb">
+                                    Zhendong Zhang, Jacob Lamb.
+                                    <span class="title"><a href="paper\Dead-Time_Compensation_of_Inverters_Considering_Snubber_and_Parasitic_Capacitance.pdf">Active Q Flux Concept for Sensorless Control of Synchronous Reluctance Machines</a></span>.
+                                    IEEE Trans. Ind. Electron., vol. 70, no. 5, pp. 4526-4536, May. 2023.
+                                    <br>
+
+                                    <a class="abstract" href="#">abstract▾</a> |
+                                    <a class="bib" href="#">bib▾</a>
+                                    
+                                    <div class="abstract" style="display: none;">
+                                        <p>In this article, we propose a new scheme to
+                                            use active flux on the q-axis for sensorless control of
+                                            synchronous reluctance machines (SynRMs). Conventionally,
+                                            “active flux” on the d-axis is adopted to convert a
+                                            salient-pole machine into a fictitious nonsalient-pole machine.
+                                            However, the injected d-axis flux can deteriorate
+                                            high-frequency injection (HFI) sensorless control performance
+                                            or even run the system into unstable region at low
+                                            speed. This article demonstrates that active flux on the
+                                            q-axis can support back EMF sensorless control at high
+                                            speed and improve low-speed HFI performance substantially.
+                                            A seamless transition from HFI sensorless method
+                                            to back EMF voltage method is attained after adopting the
+                                            proposed active q flux. The experimental results are used
+                                            to validate the proposed method.</p>
+                                    </div>
+                                    
+                                    <div class="bib" style="display: none;">
+                                        <pre>@inproceedings{Zhendong Zhang_2022_PELS
+                                            title={Industrial inverter current sensing with three shunt resistors: Limitations and solutions},
+                                            author={Zhendong Zhang, Dave Leggate, Takayoshi Matsuo},
+                                            booktitle={IEEE Trans. Power Electron., vol. 37, no. 9},
+                                            editor = {Z. Ghahramani and M. Welling and C. Cortes and N.D. Lawrence and K.Q. Weinberger},
+                                            publisher = {IEEE.},
+                                            pages = {10290--10305},
+                                            year={2022}
+                                            }
+                                        </pre>
+                                    </div>
+
+                                    <div class="clearboth"></div>
+                                </div>
+                            </li>
+                        </ol>
+
                     </section>
 
-                    <section id="contact" class="section">
-                        <h2>Contact</h2>
+                    <section id="Recognition" class="section">
+                        <h2>Recognition</h2>
+
+                        <div class="picture" style="display: block; display: flex; justify-content: center;">
+
+                            <figure>
+                                <a href="../materials/recognition/Innovation_Award_2021.jpg"><img height="250" src="../materials/recognition/Innovation_Award_2021.jpg" alt="Inverter in Rockwell Factory"></a>
+                                <figcaption">Rockwell Automation Innovation Award 2021</figcaption>
+                            </figure>
+
+                            <figure>
+                                <a href="../materials/recognition/Innovation_Award_2022.jpg"><img height="250" src="../materials/recognition/Innovation_Award_2022.jpg" alt="Demo Inverter at Carrier Facility"></a>
+                                <figcaption>Rockwell Automation Innovation Award 2022</figcaption>
+                            </figure>
+
+                            <figure>
+                                <a href="../materials/recognition/recognition_carrier.png"><img height="250" src="../materials/recognition/recognition_carrier.png" alt="Demo Inverter at Carrier Facility"></a>
+                                <figcaption>Carrier Project Recognition</figcaption>
+                            </figure>
+                        </div>
+
+                        <p class="center"><a href="#navbar">back to top</a></p>
                         
                     </section>
                 </main>
 
                 <footer class="footer">
-                    <p>You can reach me at: zhdzhang@gmail.com</p>
+                    <p>You can reach me at: zhendong.zhang@ieee.org</p>
                     <p>&copy; 2024 - Personal Website</p>
                 </footer>
 
