@@ -303,6 +303,8 @@ a:hover {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+
+	/* position: fixed; */
 }
 
 #index .navbar ul {
