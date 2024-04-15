@@ -39,12 +39,39 @@ p {
 }
 /* tables still need 'cellspacing="0"' in the markup */
 table {
-    border-collapse: separate;
-    border-spacing: 0;
+	display: table;
+    border-collapse: collapse;
+    border-spacing: 2px;
+	border-color: gray;
+	width: 700px;
+
+	background-color: rgb(179, 246, 179);
+
+	margin-left: auto;
+	margin-right: auto;
 }
-caption, th, td {
+
+table, th, td {
+	border: 1px solid black;
+}
+
+th, td {
+	padding: 10px;
     text-align: left;
     font-weight: normal;
+}
+
+th {
+	font-weight: bold;
+}
+
+/* tr:first-child, td:first-child {
+	font-weight: bold;
+} */
+
+caption {
+    text-align: center;
+    /* font-weight: normal; */
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
@@ -175,11 +202,12 @@ nav a:hover {
 }
 
 
+
 /*******************
 * Header, messages, bodyer
 ********************/
 
-#header {
+/* #header {
     background: #555;
     color: white;
     padding: 4px 8px 6px;
@@ -188,7 +216,9 @@ nav a:hover {
 #header a {
     color: inherit;
     border-bottom: none;
-}
+} */
+
+
 
 #messages {
 	width: 100%;
@@ -229,43 +259,107 @@ p.story {
 
 
 
-
 /*******************
-* Index
+* header and navbar
 ********************/
 
-#index {
+header {
     margin: 0 auto;
-    padding: 50px 0;
+    padding: 50px 0 0 0;
     width: 1000px;
+
+	position: fixed;
+	top: 0;
+	/* display: table; */
+	/* width: 100%; */
+	/* height: 64px; */
+	/* padding: 10px; */
+	box-sizing: border-box;
+	box-shadow: 0 2px 6px 0 rgba(0,0,0,.12), inset 0 -1px 0 0 #dadce0;
+	z-index: 1;
+	background-color: white;
 }
 
-#index .nameblock p {
+
+
+/* #header-nav-placeholder {
+	position: fixed;
+	top: 0;
+	display: table;
+	width: 100%;
+	height: 64px;
+	padding: 10px;
+	box-sizing: border-box;
+	box-shadow: 0 2px 6px 0 rgba(0,0,0,.12), inset 0 -1px 0 0 #dadce0;
+	z-index: 1;
+	background-color: white;
+} */
+
+
+.nameblock p {
 	font-size: 120%;
 	margin-bottom: 2px;
 	line-height: 1;
 }
-#index .nameblock .right {
+.nameblock .right {
 	margin-top: 3px;
 	text-align: right;
 }
-#index .nameblock .right a {
+.nameblock .right a {
 	border: none;
 }
-#index .nameblock h1 {
+.nameblock h1 {
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
-#index .nameblock div.pic {
+.nameblock div.pic {
 	width: 75px;
 	float: left;
 	margin-right: 15px;
 }
-#index .nameblock div.pic a {
+.nameblock div.pic a {
 	border: none;
 }
-#index .nameblock div.pic img {
+.nameblock div.pic img {
 	width: 100%;
+}
+
+.navbar {
+	background-repeat: no-repeat;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	/* position: fixed; */
+}
+
+.navbar ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.navbar li {
+	float: left;
+}
+
+.navbar a {
+	text-align: center;
+}
+  
+/* #index .navbar  a {
+	display: block;
+	padding: 8px;
+	background-color: #dddddd;
+} */
+
+
+/*******************
+* Index
+********************/
+#index {
+    margin: 150px auto;
+    padding: 0px 0;
+    width: 1000px;
 }
 
 #index #content {
@@ -298,34 +392,7 @@ a:hover {
 	color: #dfd;
 }
 
-#index .navbar {
-	background-repeat: no-repeat;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
 
-	/* position: fixed; */
-}
-
-#index .navbar ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-}
-
-#index .navbar li {
-	float: left;
-}
-
-#index .navbar a {
-	text-align: center;
-}
-  
-/* #index .navbar  a {
-	display: block;
-	padding: 8px;
-	background-color: #dddddd;
-} */
 
 /****** Header ******/
 

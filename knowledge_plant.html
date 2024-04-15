@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zhendong - Personal Website</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="screen_v6.css">
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script>
+    <script type="text/javascript" src="../jquery.min.js"></script>
+    <script type="text/javascript" src="../jquery.hotkeys.js"></script>
+    <script type="text/javascript" src="../picScroll.js"></script>
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+      </script>
+
+    <!-- <script type="text/x-mathjax-config;executed=true">
+        window.MathJax.Hub.Config({
+            showProcessingMessages: false,
+            messageStyle: "none",
+            jax: ["input/TeX", "output/HTML-CSS"],
+            tex2jax: {
+                inlineMath: [["$", "$"], ["\\(", "\\)"]],
+                displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+                skipTags: ["script", "noscript", "style", "textarea", "pre", "code", "a"]
+            },
+            "HTML-CSS": {
+                availableFonts: ["STIX", "TeX"],
+                showMathMenu: false
+            }
+        });
+
+        window.MathJax.Hub.Queue(["Typeset", MathJax.Hub,document.getElementsByClassName("ck-content")]);
+    </script> -->
+
+    <script type="text/javascript"
+        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+</head>
+
+<body class="W3C">
+    <!-- <script>
+        $(function(){
+          $("#header-nav-placeholder").load("headernav.html");
+        });
+    </script> -->
+
+    <!-- <header>
+        <div id="header-nav-placeholder">
+
+        </div>
+    </header> -->
+        <!-- <div class="header-content">
+            <h1>Zhendong</h1>
+            <p>Welcome to my personal website</p>
+            <p><a href="download.png"><img src="download.png" alt="Picture of Zhendong" width="193" height="138"></a></p>
+        </div> -->
+    <div id="container">
+        <div id="bodyer">
+
+            <div class="research_page_container">
+
+                <h1>Mechatronix Plant Modeling</h1>
+                
+                <p class="authors">
+                  Zhendong Zhang
+                </p>
+                
+                <p class="story">Quick links:
+                  <a href="https://arxiv.org/abs/1612.00005">arXiv</a> (<a href="https://arxiv.org/pdf/1612.00005v1">pdf</a>) |
+                  <a href="https://github.com/Evolving-AI-Lab/ppgn">code</a> |
+                  <a href="http://anhnguyen.me/project/ppgn/">project page</a>
+                </p>
+                
+                
+                <!-- <div class="figure">
+                  <div class="image c80"><a href="https://yosinski.com/static/proj/ppgn_teaser_caption.jpg"><img src="https://yosinski.com/static/proj/ppgn_teaser_caption.jpg" alt="PPGN teaser image"></a></div>
+                  <p class="caption">
+                    PPGNs can be used to generate images for classes from a dataset like ImageNet (top) and can also be used to turn an image → text caption model into a text → image inverse caption model (bottom).
+                    </p>
+                </div> -->
+                
+                <span title=""><a href=""></a></span>
+                
+
+                <h2>Multi-Physics Analogy</h2>
+                 
+                <p class="story">
+                  Following the gradient of a classifier model — a model that learns p(y|x) — in image space results in adversarial or fooling images (<span title="Intriguing properties of neural networks"><a href="https://arxiv.org/abs/1312.6199">Szegedy et al, 2013</a></span>, <span title="Deep Neural Networks are Easily Fooled: High Confidence Predictions for Unrecognizable Images"><a href="https://arxiv.org/abs/1412.1897">Nguyen et al, 2014</a></span>). Adding a p(x) prior containing just a few simple, hand-coded terms can produce images that are much more recognizable (<span title="Understanding Neural Networks Through Deep Visualization"><a href="http://yosinski.com/deepvis">Yosinski et al, 2015</a></span>), but there are three problems that prevent this approach from being a Magnificent and Consistent Generative Model:
+                </p>
+                <!-- <ul>
+                    <li>  (a) the colors (and other image stats) are all wrong,</li>
+                    <li>  (b) the images produced have little diversity, and</li>
+                    <li>  (c) the model is not consistent, because the p(x) was just hacked together (not learned), and because the sampler was also just a hacked together for loop.</li>
+                </ul> -->
+
+                <table>
+                    <caption>Physics Analogy</caption>
+
+                    <tr>
+                        <th>Field</th>
+                        <th>Energy Storage</th>
+                        <th>Energy Consumption</th>
+                        <th>Flux Flow</th>
+                        <th>Pressure</th>
+                    </tr>
+
+                    <tr>
+                        <td>Thermal</td>
+                        <td>Thermal Capacitor</td>
+                        <td>Thermal Resistance</td>
+                        <td>Power Loss</td>
+                        <td>Temperature Diff</td>
+                    </tr>
+
+                    <tr>
+                        <td>Mechanical</td>
+                        <td>Inertia</td>
+                        <td>Friction, Windage</td>
+                        <td>Speed</td>
+                        <td>Torque</td>
+                    </tr>
+
+                    <tr>
+                        <td>Electrical field</td>
+                        <td>Capacitor</td>
+                        <td>ESR</td>
+                        <td>Voltage</td>
+                        <td>Current</td>
+                    </tr>
+
+                    <tr>
+                        <td>Magnetic field</td>
+                        <td>Inductor</td>
+                        <td>Resistance</td>
+                        <td>Current</td>
+                        <td>Voltage</td>
+                    </tr>
+
+                </table>
+                <p></p>
+                
+                <p class="story">
+                  For the last two years we’ve been trying to solve these problems. Our NIPS 2016 paper “<span title="Synthesizing the preferred inputs for neurons in neural networks via deep generator networks"><a href="https://arxiv.org/abs/1605.09304">Synthesizing the preferred inputs for neurons in neural networks via deep generator networks (Nguyen et al. 2016)</a></span>”, solves problem (a) by using the Generator network of <span title="Generating Images with Perceptual Similarity Metrics based on Deep Networks"><a href="https://arxiv.org/abs/1602.02644">Dosovitskiy et al, 2016</a></span>, trained with DeepSim loss (image reconstruction + code reconstruction + GAN loss), which results in much more realistic colors and images.
+                </p>
+                
+                <p class="story">
+                  This paper — PPGN — solves (b) and (c) by formalizing the sampling procedure as an approximate Langevin MCMC sampler, revealing that a noise term should be added and giving which exact gradients are appropriate: grad log p(x) and grad log p(y|x), the latter term slightly different from the logit gradient that has been used in the past. It turns out that using the correct terms, albeit with manually tuned ratios, results in even better samples. The chain mixes quickly too (see video below), which is a bit weird and surprising.  
+                </p>
+                
+                <p class="story">
+                  The approach is dubbed “Plug &amp; Play Generative Networks” because the p(x) and p(y|x) halves can be decoupled, allowing one to transform any classifier p’(y|x) into a generative network by combining it with the p(x) generator half. Intuitively, the performance of the resulting PPGN will be good if the x distributions between the two training sets match and worse to the extent that they do not match. However, as the general success of transfer learning would suggest, it seems to work fairly well even when transferring a generator learned on ImageNet to classifiers learned on different datasets. This even holds when transferring to a caption model, a particularly compelling use case that allows one to transform an image → text caption model into a text → image model without any extra training.
+                </p>
+                
+                
+                <h2>Understanding of Basic Physical Systems</h2>
+
+                <h3>Mechanical Systems</h3>
+                
+                <!-- <div class="figure">
+                  <div class="youtube">
+                    <iframe width="850" height="508" src="https://www.youtube.com/embed/ePUlJMtclcY" frameborder="0" allowfullscreen=""></iframe>
+                  </div>
+                  <p class="caption">
+                    Each frame is one step in the Markov chain defined by the approximate Langevin sampler defined in the paper. See a few other videos in <a href="https://www.youtube.com/watch?v=ePUlJMtclcY&amp;list=PL5278ezwmoxQEuFSbNzTMxM7McMIqx_HS&amp;index=1">this playlist</a>.
+                </p></div> -->
+                
+                <h4>Translational Motion System</h4>
+                <p>
+                    Translational mechanical systems move along a straight line. These systems mainly consist of three basic elements. Those are mass, spring and dashpot or damper. If a force is applied to a translational mechanical system, then it is opposed by opposing forces due to mass, elasticity and friction of the system.
+                </p>
+                <div class="figure">
+                    <div class="image c80"><a href="materials/pictures/translational motion system.png"><img src="materials/pictures/translational motion system.png" alt="PPGN teaser image"></a></div>
+                    <p class="caption">
+                        PPGNs can be used to generate images for classes from a dataset like ImageNet (top) and can also be used to turn an image → text caption model into a text → image inverse caption model (bottom).
+                    </p>
+                </div>
+                
+
+
+
+                <h4>Rotational Motion System</h4>
+                <div class="figure">
+                    <div class="image c80"><a href="materials/pictures/rotational motion system.png"><img src="materials/pictures/rotational motion system.png" alt="PPGN teaser image"></a></div>
+                    <p class="caption">
+                        PPGNs can be used to generate images for classes from a dataset like ImageNet (top) and can also be used to turn an image → text caption model into a text → image inverse caption model (bottom).
+                    </p>
+                </div>
+                
+                <h3>Resonant Systems</h3>
+                <h4>Two Mass System</h4>
+                <p>
+                    When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
+                    $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
+
+                    $$ \frac{s^2 + 2\zeta_{ar}\omega_{ar}s+\omega^2_{ar}}{s^2 + 2\zeta_{r}\omega_{r}s+\omega^2_{r}} $$
+                    $$ \frac{s^2 + \frac{b}{J_{L}}s + \frac{b}{J_{L}}}{s^2 + \frac{b}{J_{e}}s + \frac{b}{J_{e}}} $$
+                    $$ \omega_r=\sqrt{\frac{k}{J_m+J_L}} $$
+                </p>
+
+                <p>
+                    Considering load ratio $ R=\frac{J_l}{J_m} $
+                </p>
+
+
+
+                <p class="story gray">
+                 Posted December 4, 2016.
+                </p>
+                <table>
+                    <caption>Resonance & Anti-Resonance</caption>
+
+                    <tr>
+                        <th>Frequency</th>
+                        <th>Frequency in R</th>
+                        <th>Damping</th>
+                    </tr>
+
+                    <tr>
+                        <td>$ F_r=\frac{\sqrt{kJ_t/(J_mJ_l)}}{2*\pi} $</td>
+                        <td>Thermal Capacitor</td>
+                        <td>Thermal Resistance</td>
+                    </tr>
+
+                    <tr>
+                        <td>Mechanical</td>
+                        <td>Inertia</td>
+                        <td>Friction, Windage</td>
+                    </tr>
+                </table>
+
+
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js">
+    </script>
+</body>
+
+</html>
