@@ -36,6 +36,10 @@ ol, ul {
 
 p {
 	text-align: justify;
+
+	font-size: 16px;
+	margin: 1.5em 0;
+	line-height: 1.4;
 }
 /* tables still need 'cellspacing="0"' in the markup */
 table {
@@ -768,82 +772,82 @@ div.prowl input {
 * Research pages
 ********************/
 
-div.research_page_container h2 {
+div.knowledge_page_container h2 {
 	margin: 50px 0 30px;
 	line-height: 1.4;
 }
-div.research_page_container h3 {
+div.knowledge_page_container h3 {
 	margin: 30px 0 10px;
 	line-height: 1.4;
 }
-div.research_page_container p.story {
+div.knowledge_page_container p.story {
 	font-size: 21px;
 }
-div.research_page_container p.authors {
+div.knowledge_page_container p.authors {
 	font-size: 19px;
 	color: #888;
 	line-height: 1.4;
 	margin-top: 5px;
 }
-div.research_page_container {
+div.knowledge_page_container {
     margin: 0 auto;
     padding: 50px 0 100px;
     width: 850px;
 }
-div.research_page_container.wide {
+div.knowledge_page_container.wide {
 	margin: 0 5%;
     width: 90%
 }
-div.research_page_container div.figure {
+div.knowledge_page_container div.figure {
 	margin: 40px 0;
 }
-div.research_page_container div.image.c100 {
+div.knowledge_page_container div.image.c100 {
 	margin: 0 auto;
 	width: 100%;
 }
-div.research_page_container div.image.c90 {
+div.knowledge_page_container div.image.c90 {
 	margin: 0 auto;
 	width: 90%;
 }
-div.research_page_container div.image.c80 {
+div.knowledge_page_container div.image.c80 {
 	margin: 0 auto;
 	width: 80%;
 }
-div.research_page_container div.image.c70 {
+div.knowledge_page_container div.image.c70 {
 	margin: 0 auto;
 	width: 70%;
 }
-div.research_page_container div.image.c60 {
+div.knowledge_page_container div.image.c60 {
 	margin: 0 auto;
 	width: 60%;
 }
-div.research_page_container div.image.c50 {
+div.knowledge_page_container div.image.c50 {
 	margin: 0 auto;
 	width: 50%;
 }
-div.research_page_container div.image.c40 {
+div.knowledge_page_container div.image.c40 {
 	margin: 0 auto;
 	width: 40%;
 }
-div.research_page_container div.image.c30 {
+div.knowledge_page_container div.image.c30 {
 	margin: 0 auto;
 	width: 30%;
 }
-div.research_page_container div.image.c20 {
+div.knowledge_page_container div.image.c20 {
 	margin: 0 auto;
 	width: 20%;
 }
-div.research_page_container div.image.c10 {
+div.knowledge_page_container div.image.c10 {
 	margin: 0 auto;
 	width: 10%;
 }
-div.research_page_container div.image a {
+div.knowledge_page_container div.image a {
     border-bottom: none;
 }
-div.research_page_container div.image img {
+div.knowledge_page_container div.image img {
 	width: 100%;
 }
-#bodyer div.research_page_container div.figure p.caption {
+#bodyer div.knowledge_page_container div.figure p.caption {
 	width: 90%;
 	text-align: justify;
 	margin: .5em auto 0;
@@ -851,24 +855,48 @@ div.research_page_container div.image img {
 	font-weight: 300;
 	font-size: 19px;
 }
-div.research_page_container div.youtube {
+div.knowledge_page_container div.youtube {
 	margin: 0 auto;
 	text-align: center;
 }
-div.research_page_container div.youtube {
+div.knowledge_page_container div.youtube {
 	margin: 0 auto;
 	text-align: center;
 }
-div.research_page_container div.deepvis-gallery div.example {
+div.knowledge_page_container div.deepvis-gallery div.example {
 	width: 100px;
 	float: left;
 	margin: 0 10px 0 0;
 }
-div.research_page_container div.deepvis-gallery div.example p.caption {
+div.knowledge_page_container div.deepvis-gallery div.example p.caption {
 	margin: 1px 0 0;
 	height: 5ex;
 }
 
+/* div.knowledge_page_container figure {
+	border: thin #c0c0c0 solid;
+	display: flex;
+	flex-flow: column;
+	padding: 5px;
+	max-width: 220px;
+	margin: auto;
+} */
+  
+/* div.knowledge_page_container img {
+	max-width: 220px;
+	max-height: 150px;
+} */
+  
+div.knowledge_page_container figcaption {
+	margin: 0 auto;
+	background-color: #fff;
+	color: #222;
+	font: italic smaller sans-serif;
+	padding: 3px;
+	text-align: center;
+	width: 80%;
+
+}
 
 
 /*******************
