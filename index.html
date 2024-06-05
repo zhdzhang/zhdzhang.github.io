@@ -32,8 +32,9 @@
 
 <body class="W3C">
 
-    <header class="header">
-    </header>
+    <!-- <header> -->
+
+    <!-- </header> -->
         <!-- <div class="header-content">
             <h1>Zhendong</h1>
             <p>Welcome to my personal website</p>
@@ -42,34 +43,16 @@
     <div id="container">
         <div id="bodyer">
             <div id="index">
-                <div class="nameblock">
-                    <div class="pic">
-                        <a href="download.png"><img src="download.png" alt="Picture of Zhendong">
-                        </a>
-                    </div>
-        
-                    <div class="left">
-                        <h1>Zhendong Zhang</h1>
-                    </div>
-        
-                    <div class="right">
-                        <a href="https://www.linkedin.com/in/zhendong-zhang-61897611/"><img height="30" src="materials/logo/linkedin_logo.png"></a>
-                        <a href="https://www.facebook.com/ZhendongZhang"><img height="30" src="materials/logo/facebook_logo.png"></a>
-                        <p>
-                            <a class="email" href="mailto:zhendong.zhang@ieee.org">zhendong.zhang@ieee.org</a>
-                        </p>
-                    </div>
+
+                <div id="header-nav-placeholder">
+
                 </div>
 
-                <nav class="navbar" id="navbar">
-                    <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#project">Project</a></li>
-                        <li><a href="#publications">Publications</a></li>
-                        <li><a href="#Recognition">Recognition</a></li>
-                    </ul>
-                </nav>
+                <script>
+                    $(function(){
+                      $("#header-nav-placeholder").load("headernav.html");
+                    });
+                </script>
 
                 <main class="main-content">
                     <section id="about" class="section">
