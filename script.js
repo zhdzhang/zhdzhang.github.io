@@ -29,3 +29,12 @@ $(document).ready(function () {
       return false;
   });
 });
+
+
+$(document).ready(function () {
+
+    $('li.navlink').click(function() {
+        $('li.navlink').removeClass('active');
+        $(this).addClass('active');
+    });
+});
