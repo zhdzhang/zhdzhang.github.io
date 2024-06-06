@@ -36,15 +36,47 @@ ol, ul {
 
 p {
 	text-align: justify;
+
+	font-size: 16px;
+	margin: 1.5em 0;
+	line-height: 1.4;
 }
 /* tables still need 'cellspacing="0"' in the markup */
 table {
-    border-collapse: separate;
-    border-spacing: 0;
+	display: table;
+    border-collapse: collapse;
+    border-spacing: 2px;
+	border-color: gray;
+	/* width: 700px; */
+	/* white-space: nowrap; */
+
+	background-color: rgb(179, 246, 179);
+
+	margin-left: auto;
+	margin-right: auto;
 }
-caption, th, td {
+
+table, th, td {
+	border: 1px solid black;
+}
+
+th, td {
+	padding: 10px;
     text-align: left;
     font-weight: normal;
+}
+
+th {
+	font-weight: bold;
+}
+
+/* tr:first-child, td:first-child {
+	font-weight: bold;
+} */
+
+caption {
+    text-align: center;
+    /* font-weight: normal; */
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
@@ -195,12 +227,18 @@ nav a:hover {
 	color: black;
 }
 
+nav>.active>a {
+	background-color: #C0C0C0;
+	color: green;
+}
+
+
 
 /*******************
 * Header, messages, bodyer
 ********************/
 
-#header {
+/* #header {
     background: #555;
     color: white;
     padding: 4px 8px 6px;
@@ -209,7 +247,9 @@ nav a:hover {
 #header a {
     color: inherit;
     border-bottom: none;
-}
+} */
+
+
 
 #messages {
 	width: 100%;
@@ -240,9 +280,11 @@ p.story {
 	font-size: 140%;
 	line-height: 1.4;
 }
-#bodyer ul {
+
+/* #bodyer ul {
     list-style: disc;
-}
+} */
+
 #bodyer ul li {
 	margin: .5em 0 .5em 2em;
 	font-weight: 300;	
@@ -250,43 +292,112 @@ p.story {
 
 
 
-
 /*******************
-* Index
+* header and navbar
 ********************/
-
-#index {
+/* 
+header {
     margin: 0 auto;
-    padding: 50px 0;
+    padding: 50px 0 0 0;
+    width: 1000px;
+
+	position: fixed;
+	top: 0; */
+	/* display: table; */
+	/* width: 100%; */
+	/* height: 64px; */
+	/* padding: 10px; */
+	/* box-sizing: border-box;
+	box-shadow: 0 2px 6px 0 rgba(0,0,0,.12), inset 0 -1px 0 0 #dadce0;
+	z-index: 1;
+	background-color: white;
+} */
+
+
+
+/* #header-nav-placeholder {
+	position: fixed;
+	top: 0;
+	display: table;
+	width: 100%;
+	height: 64px;
+	padding: 10px;
+	box-sizing: border-box;
+	box-shadow: 0 2px 6px 0 rgba(0,0,0,.12), inset 0 -1px 0 0 #dadce0;
+	z-index: 1;
+	background-color: white;
+} */
+
+#header-nav-placeholder {
+    margin: 0 auto;
+    padding: 0 0;
     width: 1000px;
 }
 
-#index .nameblock p {
+.nameblock p {
 	font-size: 120%;
 	margin-bottom: 2px;
 	line-height: 1;
 }
-#index .nameblock .right {
+.nameblock .right {
 	margin-top: 3px;
 	text-align: right;
 }
-#index .nameblock .right a {
+.nameblock .right a {
 	border: none;
 }
-#index .nameblock h1 {
+.nameblock h1 {
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
-#index .nameblock div.pic {
+.nameblock div.pic {
 	width: 75px;
 	float: left;
 	margin-right: 15px;
 }
-#index .nameblock div.pic a {
+.nameblock div.pic a {
 	border: none;
 }
-#index .nameblock div.pic img {
+.nameblock div.pic img {
 	width: 100%;
+}
+
+.navbar {
+	background-repeat: no-repeat;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	/* position: fixed; */
+}
+
+.navbar ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.navbar li {
+	float: left;
+}
+
+.navbar a {
+	text-align: center;
+}
+  
+/* #index .navbar  a {
+	display: block;
+	padding: 8px;
+	background-color: #dddddd;
+} */
+
+
+/*******************
+* Index
+********************/
+#index {
+    margin: 0px auto;
+    padding: 0px 0;
+    width: 1000px;
 }
 
 #index #content {
@@ -319,32 +430,7 @@ a:hover {
 	color: #dfd;
 }
 
-#index .navbar {
-	background-repeat: no-repeat;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-}
 
-#index .navbar ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-}
-
-#index .navbar li {
-	float: left;
-}
-
-#index .navbar a {
-	text-align: center;
-}
-  
-/* #index .navbar  a {
-	display: block;
-	padding: 8px;
-	background-color: #dddddd;
-} */
 
 /****** Header ******/
 
@@ -717,85 +803,92 @@ div.prowl input {
 
 
 /*******************
-* Research pages
+* knowledge pages
 ********************/
+div.knowledge_page_container {
+    margin: 0 auto;
+    padding: 50px 0 100px;
+    width: 1000px;
+}
 
-div.research_page_container h2 {
+div.knowledge_page_container h2 {
 	margin: 50px 0 30px;
 	line-height: 1.4;
 }
-div.research_page_container h3 {
+div.knowledge_page_container h3 {
 	margin: 30px 0 10px;
 	line-height: 1.4;
 }
-div.research_page_container p.story {
+div.knowledge_page_container p.story {
 	font-size: 21px;
 }
-div.research_page_container p.authors {
+div.knowledge_page_container p.authors {
 	font-size: 19px;
 	color: #888;
 	line-height: 1.4;
 	margin-top: 5px;
 }
-div.research_page_container {
-    margin: 0 auto;
-    padding: 50px 0 100px;
-    width: 850px;
-}
-div.research_page_container.wide {
+
+div.knowledge_page_container.wide {
 	margin: 0 5%;
     width: 90%
 }
-div.research_page_container div.figure {
+
+div.knowledge_page_container figure {
 	margin: 40px 0;
+	display: flex;
+	flex-direction: row;
+	justify-content:space-evenly;
+	align-items: flex-end;
 }
-div.research_page_container div.image.c100 {
+
+div.knowledge_page_container div.image.c100 {
 	margin: 0 auto;
 	width: 100%;
 }
-div.research_page_container div.image.c90 {
+div.knowledge_page_container div.image.c90 {
 	margin: 0 auto;
 	width: 90%;
 }
-div.research_page_container div.image.c80 {
+div.knowledge_page_container div.image.c80 {
 	margin: 0 auto;
 	width: 80%;
 }
-div.research_page_container div.image.c70 {
+div.knowledge_page_container div.image.c70 {
 	margin: 0 auto;
 	width: 70%;
 }
-div.research_page_container div.image.c60 {
+div.knowledge_page_container div.image.c60 {
 	margin: 0 auto;
 	width: 60%;
 }
-div.research_page_container div.image.c50 {
+div.knowledge_page_container div.image.c50 {
 	margin: 0 auto;
 	width: 50%;
 }
-div.research_page_container div.image.c40 {
+div.knowledge_page_container div.image.c40 {
 	margin: 0 auto;
 	width: 40%;
 }
-div.research_page_container div.image.c30 {
+div.knowledge_page_container div.image.c30 {
 	margin: 0 auto;
 	width: 30%;
 }
-div.research_page_container div.image.c20 {
+div.knowledge_page_container div.image.c20 {
 	margin: 0 auto;
 	width: 20%;
 }
-div.research_page_container div.image.c10 {
+div.knowledge_page_container div.image.c10 {
 	margin: 0 auto;
 	width: 10%;
 }
-div.research_page_container div.image a {
+div.knowledge_page_container div.image a {
     border-bottom: none;
 }
-div.research_page_container div.image img {
+div.knowledge_page_container div.image img {
 	width: 100%;
 }
-#bodyer div.research_page_container div.figure p.caption {
+#bodyer div.knowledge_page_container div.figure p.caption {
 	width: 90%;
 	text-align: justify;
 	margin: .5em auto 0;
@@ -803,24 +896,48 @@ div.research_page_container div.image img {
 	font-weight: 300;
 	font-size: 19px;
 }
-div.research_page_container div.youtube {
+div.knowledge_page_container div.youtube {
 	margin: 0 auto;
 	text-align: center;
 }
-div.research_page_container div.youtube {
+div.knowledge_page_container div.youtube {
 	margin: 0 auto;
 	text-align: center;
 }
-div.research_page_container div.deepvis-gallery div.example {
+div.knowledge_page_container div.deepvis-gallery div.example {
 	width: 100px;
 	float: left;
 	margin: 0 10px 0 0;
 }
-div.research_page_container div.deepvis-gallery div.example p.caption {
+div.knowledge_page_container div.deepvis-gallery div.example p.caption {
 	margin: 1px 0 0;
 	height: 5ex;
 }
 
+/* div.knowledge_page_container figure {
+	border: thin #c0c0c0 solid;
+	display: flex;
+	flex-flow: column;
+	padding: 5px;
+	max-width: 220px;
+	margin: auto;
+} */
+  
+/* div.knowledge_page_container img {
+	max-width: 220px;
+	max-height: 150px;
+} */
+  
+div.knowledge_page_container figcaption {
+	margin: 0 auto;
+	background-color: #fff;
+	color: #222;
+	font: italic smaller sans-serif;
+	padding: 3px;
+	text-align: center;
+	width: 80%;
+
+}
 
 
 /*******************

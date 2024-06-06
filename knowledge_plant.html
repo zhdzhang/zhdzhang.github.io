@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zhendong - Personal Website</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="screen_v6.css">
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script>
+    <script type="text/javascript" src="../jquery.min.js"></script>
+    <script type="text/javascript" src="../jquery.hotkeys.js"></script>
+    <script type="text/javascript" src="../picScroll.js"></script>
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+
+    <!-- <script type="text/x-mathjax-config;executed=true">
+        window.MathJax.Hub.Config({
+            showProcessingMessages: false,
+            messageStyle: "none",
+            jax: ["input/TeX", "output/HTML-CSS"],
+            tex2jax: {
+                inlineMath: [["$", "$"], ["\\(", "\\)"]],
+                displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+                skipTags: ["script", "noscript", "style", "textarea", "pre", "code", "a"]
+            },
+            "HTML-CSS": {
+                availableFonts: ["STIX", "TeX"],
+                showMathMenu: false
+            }
+        });
+
+        window.MathJax.Hub.Queue(["Typeset", MathJax.Hub,document.getElementsByClassName("ck-content")]);
+    </script> -->
+
+    <script type="text/javascript"
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+</head>
+
+<body class="W3C">
+    <!-- <script>
+        $(function(){
+          $("#header-nav-placeholder").load("headernav.html");
+        });
+    </script> -->
+
+    <!-- <header>
+        <div id="header-nav-placeholder">
+
+        </div>
+    </header> -->
+        <!-- <div class="header-content">
+            <h1>Zhendong</h1>
+            <p>Welcome to my personal website</p>
+            <p><a href="download.png"><img src="download.png" alt="Picture of Zhendong" width="193" height="138"></a></p>
+        </div> -->
+    <div id="container">
+        <div id="bodyer">
+            <div id="header-nav-placeholder">
+
+            </div>
+
+            <script>
+                $(function(){
+                  $("#header-nav-placeholder").load("headernav.html");
+                });
+            </script>
+
+            <div class="knowledge_page_container">
+
+                <h1>Mechatronix Plant Modeling</h1>
+                
+                <p class="authors">
+                  Very first draft. Not finished yet. New update in a more organized format is still under-development. Stay tuned.
+                </p>
+
+                
+                
+                <!-- <div class="figure">
+                  <div class="image c80"><a href="https://yosinski.com/static/proj/ppgn_teaser_caption.jpg"><img src="https://yosinski.com/static/proj/ppgn_teaser_caption.jpg" alt="PPGN teaser image"></a></div>
+                  <p class="caption">
+                    PPGNs can be used to generate images for classes from a dataset like ImageNet (top) and can also be used to turn an image → text caption model into a text → image inverse caption model (bottom).
+                    </p>
+                </div> -->
+                
+                <span title=""><a href=""></a></span>
+                
+
+                <h2>Multi-Physics Domain Analogy</h2>
+                 
+                <p>
+                  Understanding of plant modeling is the first-step and critical point for controller design. Basic physics is the foundation of model control systems. However, most physic books segregate different physical domain into seperate books or chapaters. While, there are strong correlation between different domains.
+                </p>
+
+                <h3>Unified Different Physcial Domain Plant Modeling</h3>
+                <!-- <ul>
+                    <li>  (a) the colors (and other image stats) are all wrong,</li>
+                    <li>  (b) the images produced have little diversity, and</li>
+                    <li>  (c) the model is not consistent, because the p(x) was just hacked together (not learned), and because the sampler was also just a hacked together for loop.</li>
+                </ul> -->
+
+                <table>
+                    <caption>Physics Analogy</caption>
+
+                    <tr>
+                        <th>Field</th>
+                        <th>Energy Storage</th>
+                        <th>Energy Dissipation</th>
+                        <th>Flux Flow</th>
+                        <th>Pressure</th>
+                    </tr>
+
+                    <tr>
+                        <td>Thermal</td>
+                        <td>Thermal Capacitor</td>
+                        <td>Thermal Resistance</td>
+                        <td>Power Loss</td>
+                        <td>Temperature Diff</td>
+                    </tr>
+
+                    <tr>
+                        <td>Mechanical</td>
+                        <td>Inertia</td>
+                        <td>Friction, Windage</td>
+                        <td>Speed</td>
+                        <td>Torque</td>
+                    </tr>
+
+                    <tr>
+                        <td>Electrical field</td>
+                        <td>Capacitor</td>
+                        <td>ESR</td>
+                        <td>Voltage</td>
+                        <td>Current</td>
+                    </tr>
+
+                    <tr>
+                        <td>Magnetic field</td>
+                        <td>Inductor</td>
+                        <td>Resistance</td>
+                        <td>Current</td>
+                        <td>Voltage</td>
+                    </tr>
+
+                </table>
+                <p></p>
+                
+                <p>
+                  For example, all physcial domain contains one energy storage component. Since it absorb energys, it represents the inertia if viewing it from control perspective. Also, every physical doamin contains the energy dissipation system. It represents the damping component in a control system. Without the energy dissipation component, the physcial system is osillatory.
+                </p>
+               
+                <h3>Source and Load</h3>
+                <p>
+                    For every field energy storage domain, there are sources and loads to initiate the energy transfer.
+                </p>
+
+                <ul>
+                    <li>  Load can contain energy storage device(inertia) and energy dissipate device (dampling).</li>
+                    <li>  The energy source also has its own internal load. So from outside it only shows output charactristics rather than intrinsic characteristics.</li>
+                    <li>  The final operation point will be the cross point between source output characteristic curve and load curve.</li>
+                    <li> The energy output in real time is the product of flux with potential </li>
+                </ul>
+                <figure>
+
+                    <div class="image c80">
+                        <a href="materials/pictures/knowledge/source_load_magnet.jpg"><img src="materials/pictures/knowledge/source_load_magnet.jpg" alt="PPGN teaser image"></a>
+                        <figcaption>
+                            Fig. Magnetic circuit source & load
+                        </figcaption>
+                    </div>
+
+                    <div class="image c80">
+                        <a href="materials/pictures/knowledge/source_load_mechanical.jpg"><img src="materials/pictures/knowledge/source_load_mechanical.jpg" alt="PPGN teaser image"></a>
+                        <figcaption>
+                            Fig. Mechanical circuity source & load
+                        </figcaption>
+                    </div>
+
+                    <div class="image c80">
+                        <a href="materials/pictures/knowledge/source_load_electrical.jpg"><img src="materials/pictures/knowledge/source_load_electrical.jpg" alt="PPGN teaser image"></a>
+                        <figcaption>
+                            Fig. Electrical circuit source & load
+                        </figcaption>
+                    </div>
+            </figure>
+                
+                <h3>Voltage Source and Current Source</h3>
+
+                <h3> Source in Series or in Parallel</h3>
+                <p>
+                    A lots of times, two sources are needed to drive one signal unit.   Probabaly because the other source is used to compensate for the peak performance.
+                    This is more like a hybrid mode.
+                </p>
+                <h4> Current source in parallel </h4>
+                <figure>
+
+                    <div class="image c80">
+                        <a href="materials/pictures/knowledge/current-source_parallel.png"><img src="materials/pictures/knowledge/current-source_parallel.png" alt="PPGN teaser image"></a>
+                        <figcaption>
+                            Fig. Analogy of current source in parallel
+                        </figcaption>
+                    </div>
+
+                </figure>
+
+                <p>
+                    From figure above, it can clearly observe that, though different domain, parallel the source, the format is different. But fundamentally, the math equation and curve are exactly comparable.
+                </p>
+
+                <h4> Current source in series </h4>
+                <p> Current source in series is not the preferred way unless the current source has exact same charactersitics.
+                    Otherwise, if they have different characteristics, the strong one need to compensate the week one ultimately.
+                </p>
+                <figure>
+
+                    <div class="image c80">
+                        <a href="materials/pictures/knowledge/current-source_series.png"><img src="materials/pictures/knowledge/current-source_series.png" alt="PPGN teaser image"></a>
+                        <figcaption>
+                            Fig. Analogy of current source in series
+                        </figcaption>
+                    </div>
+
+                </figure>
+
+                <h3>Normal Modeling Method of a Machine Control System</h3>
+                <p>
+                    Three Systems:
+                </p>
+                <ul>
+                    <li>
+                        Electric Machine: Inductance, Resistance First order system;
+                    </li>
+
+                    <li>
+                        DC bus: Capacitance, Resistance First order system;
+                    </li>
+
+                    <li>
+                        Mechanical Load: Inertia, Windage Loos, First order system;
+                    </li>
+                </ul>
+                    
+                    
+                    
+                
+                
+                
+                <h2>Understanding of Basic Physical Systems</h2>
+
+                <!--
+                    <iframe width="850" height="508" src="https://www.youtube.com/embed/ePUlJMtclcY" frameborder="0" allowfullscreen=""></iframe>
+                  </div>
+                  <p class="caption">
+                    Each frame is one step in the Markov chain defined by the approximate Langevin sampler defined in the paper. See a few other videos in <a href="https://www.youtube.com/watch?v=ePUlJMtclcY&amp;list=PL5278ezwmoxQEuFSbNzTMxM7McMIqx_HS&amp;index=1">this playlist</a>.
+                </p></div> -->
+                
+                <h4>Translational Motion System</h4>
+                <p>
+                    Translational mechanical systems move along a straight line. These systems mainly consist of three basic elements. Those are mass, spring and dashpot or damper. If a force is applied to a translational mechanical system, then it is opposed by opposing forces due to mass, elasticity and friction of the system.
+                </p>
+
+                <figure>
+                    <div class = "image single">
+                        <div class="image c80"><a href="materials/pictures/translational motion system.png"><img src="materials/pictures/knowledge/translational motion system.png" alt="PPGN teaser image"></a></div>
+                        <figcaption>
+                            PPGNs can be used to generate images for classes from a dataset like ImageNet (top) and can also be used to turn an image → text caption model into a text → image inverse caption model (bottom).
+                        </figcaption>
+                    </div>
+
+                </figure>
+                
+
+
+
+                <h4>Rotational Motion System</h4>
+
+                <figure>
+                    <div class="image c80">
+                        <a href="materials/pictures/rotational motion system.png"><img src="materials/pictures/knowledge/rotational motion system.png" alt="PPGN teaser image"></a>
+                        <figcaption>
+                            PPGNs can be used to generate images for classes from a dataset like ImageNet (top) and can also be used to turn an image → text caption model into a text → image inverse caption model (bottom).
+                        </figcaption>
+                    </div>
+
+                </figure>
+                
+                <h3>Basic Resonant Systems</h3>
+                <h4>Two Mass System(Mechanical)</h4>
+                <p>
+                    Normally, two mass system represents a general mechanical system that has two fixed mass at two end and a tortional bar between.
+                    
+                </p>
+
+                <figure>
+
+                        <div class="image c80">
+                            <a href="materials/pictures/knowledge/two_mass_system1.png"><img src="materials/pictures/knowledge/two_mass_system1.png" alt="PPGN teaser image"></a>
+                            <figcaption>
+                                Fig. Two Mass System.
+                            </figcaption>
+                        </div>
+
+                        <div class="image c40">
+                            <a href="materials/pictures/knowledge/two_mass_system_block_diagram.png"><img src="materials/pictures/knowledge/two_mass_system_block_diagram.png" alt="PPGN teaser image"></a>
+                            <figcaption>
+                                Fig. Block Diagram of Two Mass System
+                            </figcaption>
+                        </div>
+                </figure>
+
+
+                <figure>
+                        <div class="image c60">
+                            <a href="materials/pictures/knowledge/two_mass_system_TF.PNG"><img src="materials/pictures/knowledge/two_mass_system_TF.PNG" alt="PPGN teaser image"></a>
+                            <figcaption>
+                                Fig. Transfer Function of Two Mass System
+                            </figcaption>
+                        </div>
+
+                        <table>
+                            <caption>Inertia & Load Ratio Definition</caption>
+        
+                            <tr>
+                                <th>Frequency</th>
+                                <th>Frequency in R</th>
+                            </tr>
+        
+                            <tr>
+                                <td>$ J_t = J_L+J_m $</td>
+                                <td>$ J_e = \frac{J_LJ_m}{J_t}   \frac{1}{J_e} = \frac{1}{J_L}+\frac{1}{J_m} $</td>
+                            </tr>
+        
+                            <tr>
+                                <td>$ R=\frac{J_L}{J_m} $</td>
+                                <td>$ R+1=\frac{J_t}{J_m} $</td>
+                            </tr>
+                        </table>
+
+                </figure>
+
+
+
+                <p>
+
+
+                    $$  $$
+                    $$ \frac{s^2 + \frac{b}{J_{L}}s + \frac{k}{J_{L}}}{s^2 + \frac{b}{J_{e}}s + \frac{k}{J_{e}}} $$
+                    $$ \omega_r=\sqrt{\frac{k}{J_m+J_L}} $$
+
+                    
+                    
+                    
+                </p>
+
+                <p>
+                    Considering load ratio $ R=\frac{J_L}{J_m} $
+                </p>
+
+
+                <p>
+                    For low frequency analysis, it is easy to see, when $ s=0 $, the gain is a function of total inertia. The motor and the load spin together as one;
+                </p>
+
+                <p>
+                    For high frequency analysis, the gain will be only a function the motor inertia, the load is disconnected from the motor.
+
+                    $$ \frac{V_m(s)}{T_m(s)}=\frac{1}{sJ_t}  \frac{J_{L}s^2 + bs + k}{J_{e}s^2 + bs + k} = \frac{1}{sJ_t} \frac{J_{L} (s^2 + \frac{b}{J_{L}}s + \frac{k}{J_{L}})}{J_e(s^2 + \frac{b}{J_{e}}s + \frac{k}{J_{e}})} = \frac{1}{sJ_m} \frac{(s^2 + \frac{b}{J_{L}}s + \frac{k}{J_{L}})}{(s^2 + \frac{b}{J_{e}}s + \frac{k}{J_{e}})} $$
+
+                </p>
+
+                <p>
+                    Set above equavtion to desired Transfer function
+                    $$ \frac{V_m(s)}{T_m(s)}=\frac{1}{sJ_m} \frac{(s^2 + \frac{b}{J_{L}}s + \frac{k}{J_{L}})}{(s^2 + \frac{b}{J_{e}}s + \frac{k}{J_{e}})} =  \frac{1}{sJ_m} \frac{s^2 + 2\zeta_{ar}\omega_{ar}s+\omega^2_{ar}}{s^2 + 2\zeta_{r}\omega_{r}s+\omega^2_{r}}$$
+                </p>
+
+                <p>
+                    where,
+                </p>
+
+
+
+                <figure>
+                    <div class="image c60">
+                        <a href="materials/pictures/knowledge/two-mass_resonance_bode.png"><img src="materials/pictures/knowledge/two-mass_resonance_bode.png" alt="PPGN teaser image"></a>
+                        <figcaption>
+                            Fig. Transfer Function of Two Mass System
+                        </figcaption>
+                    </div>
+
+                    <table>
+                        <caption>Resonance & Anti-Resonance</caption>
+    
+                        <tr>
+                            <th>Frequency</th>
+                            <th>Frequency in R</th>
+                            <th>Damping</th>
+                        </tr>
+    
+                        <tr>
+                            <td>$ \omega_r=\sqrt{\frac{K}{J_e}} $</td>
+                            <td>$ \omega_{ar}=\sqrt{\frac{K}{J_L}} $</td>
+                            <td>$ \omega_{r}^{2} = \omega_{ar}^{2} (R+1) $</td>
+                        </tr>
+    
+                        <tr>
+                            <td>$ h_r=\frac{b}{2\omega_rJ_e} $</td>
+                            <td>$ h_{ar}=\frac{b}{2\omega_{ar}J_L} $</td>
+                            <td>$ K=J_L \omega_{ar}^{2} = J_e \omega_{r}^{2} $</td>
+                        </tr>
+                    </table>
+
+                </figure>
+
+                <p>
+                    The higher the load ratio R, the smaller the Fr. Then the resonant frequency falls inside contrl loop bandwidth.
+                </p>
+
+                <p>
+                    belts, pulleys, shafts, misalignment, looseness, backlash, and couplings commonly produce resonances with the control loop bandwidth
+                </p>
+
+                <h4>LCL(Electrical)</h4>
+                <p>
+                    For grid integrated voltage source converter, it cannot attach directly since both are voltage source. An LCL filter is inserted between to damp out converter switching frequency harmonics.
+                </p>
+                <figure>
+                    <div class="image c80">
+                        <a href="materials/pictures/LCL resonant system.jpg"><img src="materials/pictures/knowledge/LCL resonant system.jpg" alt="PPGN teaser image"></a>
+                        <figcaption>
+                            Fig. LCL connection between converter and grid.
+                        </figcaption>
+                    </div>
+
+                </figure>
+
+                <table>
+                    <caption>Inertia & Load Ratio Definition</caption>
+
+                    <tr>
+                        <th>Total Inductance</th>
+                        <th>Frequency in R</th>
+                    </tr>
+
+                    <tr>
+                        <td>$ L_t = L_g+L_c $</td>
+                        <td>$ L_e = \frac{L_gL_c}{L_t},   \frac{1}{L_e} = \frac{1}{L_g}+\frac{1}{L_c} $</td>
+                    </tr>
+                </table>
+
+                <p>
+                    For high frequency analysis, the gain will be only a function the motor inertia, the load is disconnected from the motor.
+
+                    $$ \frac{I_c(s)}{V_c(s)}=\frac{1}{sL_t}  \frac{L_{g}s^2 + R_{f}s + \frac{1}{C_f}}{L_{e}s^2 + R_{f}s + \frac{1}{C_f}}$$
+
+                </p>
+
+                <p> Annotation: Normally, engineers deal with two-mass mechanical modeling and engineers deal with LCL converter are two group of engineers. But they are exact same mathmatical system expressed at two different domain </p>
+
+                <h3>Resonant System with Transformer</h3>
+
+                <h4>Strain Wave Gearing(Harmonic Gearing)</h4>
+                <figure>
+
+                    <div class="image c60"><a href="materials/pictures/harmonic_gearing.png"><img src="materials/pictures/knowledge/harmonic_gearing.png" alt="PPGN teaser image"></a>
+                        <figcaption>
+                            Fig. LCL connection between converter and grid.
+                        </figcaption>
+                    </div>
+
+                    <div class="image c50"><a href="materials/pictures/harmonic_gearing_1.png"><img src="materials/pictures/knowledge/harmonic_gearing_1.png" alt="PPGN teaser image"></a>
+                        <figcaption>
+                            Fig. LCL connection between converter and grid.
+                        </figcaption>
+                    </div>
+
+
+
+                    <div class="image c40"><a href="materials/pictures/harmonic_gearing_2.png"><img src="materials/pictures/knowledge/harmonic_gearing_2.png" alt="PPGN teaser image"></a>
+                        <figcaption>
+                            Fig. LCL connection between converter and grid.
+                        </figcaption>
+                    </div>
+                </figure>
+
+
+                <h4>Electrical Submersible Pump</h4>
+                <p>
+                    E-frac systems utilize electrically powered pressure pumps running on modular gas turbine generators, as opposed to the diesel-driven pumps of a conventional system. The turbines make electricity using CNG, LNG or site-produced field gas that may otherwise be flared. This means both fuel savings and carbon reductions are possible.
+                </p>
+                <figure>
+                    <div class="image c40">
+                        <a href="materials/pictures/LCL resonant system.png"><img src="materials/pictures/knowledge/electrical_submersible_pump.jpg" alt="PPGN teaser image"></a>
+                        <figcaption>
+                            Fig. Electrical Submersible Pump
+                        </figcaption>
+                    </div>
+                    <div class="image c90">
+                        <a href="materials/pictures/esp_electrical.png"><img src="materials/pictures/knowledge/esp_electrical.png" alt="PPGN teaser image"></a>
+                        <figcaption>
+                            Fig. Electrical Submersible Pump
+                        </figcaption>
+                    </div>
+                </figure>
+
+
+
+                <h3>Magnetic Bearing</h3>
+                <figure>
+                    <div class="image c50">
+                        <a href="materials/pictures/knowledge/magnetic_bearing_axial_view.jpg"><img src="materials/pictures/knowledge/magnetic_bearing_axial_view.jpg" alt="PPGN teaser image"></a>
+                        <figcaption>
+                            Fig. Magnetic Bearing
+                        </figcaption>
+                    </div>
+
+                </figure>
+
+                <p>
+                    Load Torque
+                    $$ f_m(x_0,i_0)=mg $$
+                    Generate Torque
+                    $$ f(x,i)=-k_sx+k_ii $$
+                    $$ f(x,i)-f_m(x_0,i_0)=m $$
+                </p>
+
+
+                <h3>Water Slothing & Reverse Pendulum</h3>
+                <figure>
+                    <div class="image c50">
+                        <a href="materials/pictures/knowledge/water_slothing_bench.PNG"><img src="materials/pictures/knowledge/water_slothing_bench.PNG" alt="PPGN teaser image"></a>
+                        <figcaption>
+                            Fig. Magnetic Bearing
+                        </figcaption>
+                    </div>
+
+                    <div class="image c40">
+                        <a href="materials/pictures/knowledge/water_slothing_illustration.PNG"><img src="materials/pictures/knowledge/water_slothing_illustration.PNG" alt="PPGN teaser image"></a>
+                        <figcaption>
+                            Fig. Magnetic Bearing
+                        </figcaption>
+                    </div>
+
+                </figure>
+
+                <p class="story gray">
+                    Posted December 4, 2016.
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js">
+    </script>
+</body>
+
+</html>

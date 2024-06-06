@@ -2,8 +2,21 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CT4PZEBV4D"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-CT4PZEBV4D');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="en-us">
+
     <title>Zhendong - Personal Website</title>
     <link rel="stylesheet" type="text/css" media="screen" href="screen_v6.css">
     <link rel="shortcut icon" href="../favicon.ico">
@@ -12,12 +25,16 @@
     <script type="text/javascript" src="../jquery.min.js"></script>
     <script type="text/javascript" src="../jquery.hotkeys.js"></script>
     <script type="text/javascript" src="../picScroll.js"></script>
+
+    <meta name="description" content="Research portfolio and personal page for Zhendong Zhang">
+    <meta name="keywords" content="Zhendong Zhang, Zhendong, Electrical Engineering, Servo, Drive, Permanent Magnet Motor, Sensorless, Compressor">
 </head>
 
 <body class="W3C">
 
-    <header class="header">
-    </header>
+    <!-- <header> -->
+
+    <!-- </header> -->
         <!-- <div class="header-content">
             <h1>Zhendong</h1>
             <p>Welcome to my personal website</p>
@@ -26,34 +43,16 @@
     <div id="container">
         <div id="bodyer">
             <div id="index">
-                <div class="nameblock">
-                    <div class="pic">
-                        <a href="download.png"><img src="download.png" alt="Picture of Zhendong">
-                        </a>
-                    </div>
-        
-                    <div class="left">
-                        <h1>Zhendong Zhang</h1>
-                    </div>
-        
-                    <div class="right">
-                        <a href="https://www.linkedin.com/in/zhendong-zhang-61897611/"><img height="30" src="materials/logo/linkedin_logo.png"></a>
-                        <a href="https://www.facebook.com/ZhendongZhang"><img height="30" src="materials/logo/facebook_logo.png"></a>
-                        <p>
-                            <a class="email" href="mailto:zhendong.zhang@ieee.org">zhendong.zhang@ieee.org</a>
-                        </p>
-                    </div>
+
+                <div id="header-nav-placeholder">
+
                 </div>
 
-                <nav class="navbar" id="navbar">
-                    <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#project">Project</a></li>
-                        <li><a href="#publications">Publications</a></li>
-                        <li><a href="#Recognition">Recognition</a></li>
-                    </ul>
-                </nav>
+                <script>
+                    $(function(){
+                      $("#header-nav-placeholder").load("headernav.html");
+                    });
+                </script>
 
                 <main class="main-content">
                     <section id="about" class="section">
@@ -61,7 +60,6 @@
                         <p class="story">
                             Hello, this is Zhendong Zhang.  I am an firmware engineer that develop real-time control algorithm for electric machine in various applications such as servo motion system, vehicle electrification.
                             My backgroud is about the eletromagnetic analysis of electric machine, power electronics converter control and analysis, different control loop bandwidth analysis, etc.
-                            loop analysis.
                         </p>
                         
                         <p class="story">
@@ -121,9 +119,9 @@
                                 <p> I worked at Rockwell Automation from Sep, 2013 to Aug, 2022, first as senior firmware engineer, then project firmware engineer, and later as senior project firmware engineer.</p>
                                 <p> I mainly involed in three major projects: 1) PF527 component drive; 2) PF755T high performance drive; and 3) Carrier high speed chiller drive.</p>
 
-                                <p> I helped to develop the latest Rockwell drive product using MATLAB/model based design technology. I has involved in a series algorithm development such as:</p>
-                                <p> Most important: Under the business cultural framework - "WE ARE ONE, SPEED, INNOVATION, and ACT LIKE AN OWNER". I have worked with a group of experiencedk hardworking, and super hubble engineers. They not only teach me about the knowledges, but also show me the merits of being elegent gentleman.
-                                    The management team sets up an group vide that each engineer is respected and they always try their best to service the needs of individual engineer, for both the life and work.
+                                <p> I helped to develop the latest Rockwell drive product using MATLAB/model based design technology. I has involved in a series algorithm development.</p>
+                                <p> Most important: Under the business cultural framework - "WE ARE ONE, SPEED, INNOVATION, and ACT LIKE AN OWNER". I have worked with a group of experienced, hardworking, and modest engineers. They not only taught me all the knowledges, but also serves as the engineer role model .
+                                    The management team sets up an group culcture that every engineer is respected and they always try their best to service the needs of individual engineer during their work and care about their life as well.
                                 </p>
 
                                 <a class="reference" href="#">reference▾</a>
@@ -390,14 +388,16 @@
                         
                         <hr>
                         
-                        <h3>Tools</h3>
+                        <h3>Software Development Tools & Process</h3>
                         <ul>
-                            <li>Project management: Scale Agile Framework(SAFe)</li>
-                            <p style="text-indent:40px">Sprint Planning, Sprint Review, Agile Release Train</p>
-                            <li>DevOps</li>
-                            <p style="text-indent:40px">Python Build Machine, Git Repository, Teamcity CI/CD, JFrog Artifactory, Build Promotion, Smoke Test</p>
+                            <li>Project Management: Scale Agile Framework(SAFe), Lean Development Process</li>
+                            <p style="text-indent:40px">Sprint Planning, Sprint Review, Retrospective Review, Agile Release Train</p>
+                            <li>Software Development Cycle</li>
+                            <p style="text-indent:40px">Design Review, Design Guideline, Code Review, Naming Convention, Unit Simulation Test(Test Case, Test Harness), Report Generation, Bench Test Validation </p>
+                            <li>DevOps Process</li>
+                            <p style="text-indent:40px">Python Build Machine, Build in Command Window, Git Repository, Teamcity CI/CD, JFrog Artifactory, Build Promotion Level, Smoke Test</p>
                             <li>Matlab Model Based Design</li>
-                            <p style="text-indent:40px">High Level Design Document, Modularized architecture(shared modules vs project specific module), Naming Convention, Model development review, model code review, model static check, Unit test, test report generation</p>
+                            <p style="text-indent:40px">High Level Design Document, Modularized architecture(shared modules vs project specific module), MAAB, MISRA-C, Coverage Report, Dead Logic Check</p>
                         </ul>
 
                         <p class="center"><a href="#navbar">back to top </a></p>
@@ -643,6 +643,17 @@
         </div>
     </div>
 
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-7441399-1']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();    
+    </script>
+      
     <script src="script.js">
     </script>
 </body>
