@@ -91,13 +91,13 @@
                 <span title=""><a href=""></a></span>
                 
 
-                <h2>Multi-Physics Domain Analogy</h2>
+                <h2>1. Multi-Physics Domain Analogy</h2>
                  
                 <p>
                   Understanding of plant modeling is the first-step and critical point for controller design. Basic physics is the foundation of model control systems. However, most physic books segregate different physical domain into seperate books or chapaters. While, there are strong correlation between different domains.
                 </p>
 
-                <h3>Unified Different Physcial Domain Plant Modeling</h3>
+                <h3>1.1 Unified Different Physcial Domain Plant Modeling</h3>
                 <!-- <ul>
                     <li>  (a) the colors (and other image stats) are all wrong,</li>
                     <li>  (b) the images produced have little diversity, and</li>
@@ -154,7 +154,7 @@
                   For example, all physcial domain contains one energy storage component. Since it absorb energys, it represents the inertia if viewing it from control perspective. Also, every physical doamin contains the energy dissipation system. It represents the damping component in a control system. Without the energy dissipation component, the physcial system is osillatory.
                 </p>
                
-                <h3>Source and Load</h3>
+                <h3>1.2 Source and Load</h3>
                 <p>
                     For every field energy storage domain, there are sources and loads to initiate the energy transfer.
                 </p>
@@ -189,9 +189,9 @@
                     </div>
             </figure>
                 
-                <h3>Voltage Source and Current Source</h3>
+                <h4>Voltage Source and Current Source</h4>
 
-                <h3> Source in Series or in Parallel</h3>
+                <h4> Source in Series or in Parallel</h4>
                 <p>
                     A lots of times, two sources are needed to drive one signal unit.   Probabaly because the other source is used to compensate for the peak performance.
                     This is more like a hybrid mode.
@@ -250,7 +250,7 @@
                 
                 
                 
-                <h2>Understanding of Basic Physical Systems</h2>
+                <h2>2. Understanding of Basic Physical Systems</h2>
 
                 <!--
                     <iframe width="850" height="508" src="https://www.youtube.com/embed/ePUlJMtclcY" frameborder="0" allowfullscreen=""></iframe>
@@ -547,13 +547,79 @@
 
                 </figure>
 
+                <p>
+                    Equation
+                    $$ \ddot{\phi} - \frac{mgl}{I+ml^2} \phi = \frac{ml}{I+ml^2}\ddot{x} $$
+                    $$ \ddot{x} + \frac{b}{M+m}\dot{x} = \frac{ml}{M+m}\ddot{\phi} + \frac{u}{M+m} $$
+
+                </p>
+
+                <figure>
+                    <div class="image c50">
+                        <a href="materials/pictures/knowledge/inverted_pendulum.png"><img src="materials/pictures/knowledge/inverted_pendulum.png" alt="PPGN teaser image"></a>
+                        <figcaption>
+                            Fig. Inverted Pendulum
+                        </figcaption>
+                    </div>
+
+                    <div class="image c50">
+                        <a href="materials/pictures/knowledge/inverted_pendulum_blockdiagram.png"><img src="materials/pictures/knowledge/inverted_pendulum_blockdiagram.png" alt="PPGN teaser image"></a>
+                        <figcaption>
+                            Fig. Inverted Pendulum
+                        </figcaption>
+                    </div>
+
+                </figure>
+
+                <h3>Summary: Plant General</h3>
+                <p>
+                    Most important about a plant
+
+                </p>
+
+                <ol>
+                    <li>Nominator, Denominator, relative degree.</li>
+                    <li>Nominator, high frequency gain</li>
+                </ol>
+
+
+                <table>
+                    <caption>Plant Model Important for Control Design</caption>
+
+                    <tr>
+                        <th>Transfer Function</th>
+                        <th>DC Component (Stead State)</th>
+                        <th>High Frequency TF</th>
+                        <th>Relative Order</th>
+                        <th>High Frequency Gain</th>
+                    </tr>
+
+                    <tr>
+                        <td>$ \frac{b_0}{s^2} $</td>
+                        <td>$ \frac{b_0}{0} $</td>
+                        <td>$ \frac{b_0}{s^2} $</td>
+                        <td> 2 </td>
+                        <td>$ b_0 $</td>
+                    </tr>
+
+                    <tr>
+                        <td>$ \frac{b_1s+b_0}{s^2+a_1s+a_0} $</td>
+                        <td>$ \frac{b_0}{a_0} $</td>
+                        <td>$ \frac{b_1s}{s^2} $</td>
+                        <td> 1 </td>
+                        <td>$ b_1 $</td>
+                    </tr>
+
+                </table>
+
                 <p class="story gray">
-                    Posted December 4, 2016.
+                    Posted , 2024.
                 </p>
 
             </div>
         </div>
     </div>
+
 
     <script src="script.js">
     </script>
