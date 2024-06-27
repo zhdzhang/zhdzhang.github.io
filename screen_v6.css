@@ -76,8 +76,13 @@ th {
 
 caption {
     text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-decoration: underline;
+	font-weight: bold;
     /* font-weight: normal; */
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
     content: "";
@@ -275,15 +280,16 @@ p.story {
 p.story {
 	text-align: justify;	
 }
+
 #bodyer ol,
 #bodyer ul {
-	font-size: 140%;
+	/* font-size: 140%; */
 	line-height: 1.4;
 }
 
-/* #bodyer ul {
+#bodyer ul {
     list-style: disc;
-} */
+}
 
 #bodyer ul li {
 	margin: .5em 0 .5em 2em;

@@ -73,14 +73,52 @@
 
             <div class="knowledge_page_container">
 
-                <h1>Mechatronix Plant Modeling</h1>
+                <h1>Mechatronics Plant Modeling</h1>
                 
                 <p class="authors">
                   Very first draft. Not finished yet. New update in a more organized format is still under-development. Stay tuned.
                 </p>
+                <p>
+                    Before we dive into the content, I would like to emphasizes two words: "Summarization" & "Analogy".  These two words stand for the most methods I adopted during my knowledge development journey.
+                </p>
+                <p>
+                    For most student and engineers with electric machine, power electronics, and motor control backgroud, they focuses more on the design of electromagnetic systems. Such as: magnetic flux, voltage, current, inductance saturation, etc.
+                    Plant nonlinearity such as saturation as well as harmonics becomes their primary topic to deal with.  In that sense, however, the plant is normally first order system with one pole.
+                </p>
+                
+                <p>Here is an example:</p>
 
-                
-                
+                <p>Normal Modeling Method of a Machine Control System</p>
+                <p>
+                    Three Systems:
+                </p>
+                <ul>
+                    <li>
+                        Electric Machine: Inductance, Resistance, First order system;
+                    </li>
+
+                    <li>
+                        DC bus: Capacitance, Resistance First order system;
+                    </li>
+
+                    <li>
+                        Mechanical Load: Inertia, Windage Lose, First order system;
+                    </li>
+                </ul>
+
+                <p>
+                    For first order system, a PI regulator can handle most of the control without any issue.
+                    However, most system in real life is not pure first order system. System such as motion control system, or aerospace system are more than first order system.
+                    How to first model the system as well as design a controller to satisfy the performance requirement becomes chanllanging.
+                </p>
+
+                <p>
+                    Even for a electromagnetic system such as a LCL circuit that connects an converter to the electric grid, it physical model is more than first order system.
+                </p>
+
+                <p>
+                    Higher order system with multiple energy storage elements can introduce resonance.
+                </p>
                 <!-- <div class="figure">
                   <div class="image c80"><a href="https://yosinski.com/static/proj/ppgn_teaser_caption.jpg"><img src="https://yosinski.com/static/proj/ppgn_teaser_caption.jpg" alt="PPGN teaser image"></a></div>
                   <p class="caption">
@@ -105,7 +143,7 @@
                 </ul> -->
 
                 <table>
-                    <caption>Physics Analogy</caption>
+                    <caption>TABLE I : Physics Analogy</caption>
 
                     <tr>
                         <th>Field</th>
@@ -190,12 +228,19 @@
             </figure>
                 
                 <h3>Voltage Source and Current Source</h3>
-
+                <p>
+                    TABLE I above shows modeling of different domains.  If the source mainly control its output "pressure", which the actual developped flux flow is based on its modeling, this is called voltage source.
+                    On the other hand, if the source mainly outputs "Flux Flow" and the pressure is decided by the model itself, it is called "current source".
+                </p>
+                <p>
+                    However, if we connect two same or different source together, the output characteristics can be very different.
+                </p>
                 <h3> Source in Series or in Parallel</h3>
                 <p>
-                    A lots of times, two sources are needed to drive one signal unit.   Probabaly because the other source is used to compensate for the peak performance.
-                    This is more like a hybrid mode.
+                    A lots of times, two sources are needed to drive one signal unit. For example, the second source is only used to cover the peak loading. The word "Hybrid" normally refers to a system that has two different sources.
                 </p>
+
+                <p> When different sources are coupled, can we do analogy between different physical domains?</p>
                 <h4> Current source in parallel </h4>
                 <figure>
 
@@ -227,23 +272,7 @@
 
                 </figure>
 
-                <h3>Normal Modeling Method of a Machine Control System</h3>
-                <p>
-                    Three Systems:
-                </p>
-                <ul>
-                    <li>
-                        Electric Machine: Inductance, Resistance First order system;
-                    </li>
 
-                    <li>
-                        DC bus: Capacitance, Resistance First order system;
-                    </li>
-
-                    <li>
-                        Mechanical Load: Inertia, Windage Loos, First order system;
-                    </li>
-                </ul>
                     
                     
                     
@@ -290,7 +319,7 @@
                 </figure>
                 
                 <h3>Basic Resonant Systems</h3>
-                <h4>Two Mass System(Mechanical)</h4>
+                <h4>Two Mass System(Mechanical Resonant System)</h4>
                 <p>
                     Normally, two mass system represents a general mechanical system that has two fixed mass at two end and a tortional bar between.
                     
@@ -417,14 +446,14 @@
                 </figure>
 
                 <p>
-                    The higher the load ratio R, the smaller the Fr. Then the resonant frequency falls inside contrl loop bandwidth.
+                    The higher the load ratio $R$, the smaller the $F_r$. Then the resonant frequency could fall inside contrl loop bandwidth.
                 </p>
 
                 <p>
-                    belts, pulleys, shafts, misalignment, looseness, backlash, and couplings commonly produce resonances with the control loop bandwidth
+                    belts, pulleys, shafts, misalignment, looseness, backlash, and couplings commonly produce resonances within the control loop bandwidth
                 </p>
 
-                <h4>LCL(Electrical)</h4>
+                <h4>LCL(Electric Resonant System)</h4>
                 <p>
                     For grid integrated voltage source converter, it cannot attach directly since both are voltage source. An LCL filter is inserted between to damp out converter switching frequency harmonics.
                 </p>
@@ -459,7 +488,34 @@
 
                 </p>
 
-                <p> Annotation: Normally, engineers deal with two-mass mechanical modeling and engineers deal with LCL converter are two group of engineers. But they are exact same mathmatical system expressed at two different domain </p>
+                <p> Annotation 1: Normally, engineers deal with two-mass mechanical modeling and engineers deal with LCL converter are two group of engineers. But they are exact same mathmatical system expressed at two different domain </p>
+                <p> Annotation 2: Inverter controlled rotating machine and Grid integrated converter with LCL as its load</p>
+
+                <table>
+                    <caption>Control Loop Analogy</caption>
+
+                    <tr>
+                        <th></th>
+                        <th>Inverter & Machine</th>
+                        <th>Converter & LCL</th>
+                    </tr>
+
+                    <tr>
+                        <td>Inner Loop</td>
+                        <td> RL first order system</td>
+                        <td> LCL third order resonant system</td>
+                    </tr>
+
+                    <tr>
+                        <td>Outer Loop</td>
+                        <td> Two-Mass resonant system</td>
+                        <td> RC first order system</td>
+                    </tr>
+                </table>
+
+                <p>
+                    In conclusion, the two system swapped its inner loop and output loop mathmatical models.
+                </p>
 
                 <h3>Resonant System with Transformer</h3>
 
@@ -530,6 +586,8 @@
 
 
                 <h3>Water Slothing & Reverse Pendulum</h3>
+
+                <h4>Water Slothing</h4>
                 <figure>
                     <div class="image c50">
                         <a href="materials/pictures/knowledge/water_slothing_bench.PNG"><img src="materials/pictures/knowledge/water_slothing_bench.PNG" alt="PPGN teaser image"></a>
@@ -547,8 +605,17 @@
 
                 </figure>
 
+                <figure>
+                    <div class="image c50">
+                        <a href="materials/pictures/knowledge/water_slothing_blockdiagram.png"><img src="materials/pictures/knowledge/water_slothing_blockdiagram.png" alt="PPGN teaser image"></a>
+                        <figcaption>
+                            Fig. Water slothing block diagram
+                        </figcaption>
+                    </div>
+                </figure>
+
                 <p class="story gray">
-                    Posted December 4, 2016.
+                    Posted June 26, 2024.
                 </p>
 
             </div>
