@@ -18,20 +18,25 @@
     <meta http-equiv="Content-Language" content="en-us">
 
     <title>Zhendong - Personal Website</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="screen_v6.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../styles/screen_v6.css">
     <link rel="shortcut icon" href="../favicon.ico">
 
     <script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script>
-    <script type="text/javascript" src="../jquery.min.js"></script>
-    <script type="text/javascript" src="../jquery.hotkeys.js"></script>
-    <script type="text/javascript" src="../picScroll.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.hotkeys.js"></script>
+    <script type="text/javascript" src="../scripts/picScroll.js"></script>
 
     <meta name="description" content="Research portfolio and personal page for Zhendong Zhang">
     <meta name="keywords" content="Zhendong Zhang, Zhendong, Electrical Engineering, Servo, Drive, Permanent Magnet Motor, Sensorless, Compressor">
 </head>
 
-<body class="W3C">
+<body data-theme="dark">
 
+    <script>
+        document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+
+   
     <!-- <header> -->
 
     <!-- </header> -->
@@ -53,6 +58,32 @@
                       $("#header-nav-placeholder").load("headernav.html");
                     });
                 </script>
+
+                <!-- <div class="content-icon-container">
+                    <div class="theme-toggle-container theme-toggle-content">
+                    <button class="theme-toggle" title="Toggle color theme">
+                        <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+                        <svg class="theme-icon-when-auto">
+                        <use href="#svg-sun-half"></use>
+                        </svg>
+                        <svg class="theme-icon-when-dark">
+                        <use href="#svg-moon"></use>
+                        </svg>
+                        <svg class="theme-icon-when-light">
+                        <use href="#svg-sun"></use>
+                        </svg>
+                    </button>
+                    </div>
+                    
+                    <label class="toc-overlay-icon toc-content-icon" for="__toc">
+                    <div class="visually-hidden">Toggle table of contents sidebar</div>
+                    <i class="icon">
+                        <svg>
+                        <use href="#svg-toc"></use>
+                        </svg>
+                    </i>
+                    </label>
+                </div> -->
 
                 <main class="main-content">
                     <section id="about" class="section">
@@ -650,13 +681,13 @@
                   <div class="toc-tree-container">
                     <div class="toc-tree">
                       <ul>
-                        <li><a class="reference internal" href="#">Inverted Pendulum</a>
+                        <li><a href="#">Inverted Pendulum</a>
                             <ul>
-                                <li><a class="reference internal" href="#about">About Me</a></li>
-                                <li><a class="reference internal" href="#experience">Experience</a></li>
-                                <li><a class="reference internal" href="#project">Projects</a></li>
-                                <li><a class="reference internal" href="#publications">Publications</a></li>
-                                <li><a class="reference internal" href="#recognition">Recognition</a></li>
+                                <li><a href="#about">About Me</a></li>
+                                <li><a href="#experience">Experience</a></li>
+                                <li><a href="#project">Projects</a></li>
+                                <li><a href="#publications">Publications</a></li>
+                                <li><a href="#recognition">Recognition</a></li>
 
                             </ul>
                         </li>
@@ -680,9 +711,9 @@
           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();    
     </script>
-      
-    <script src="script.js">
-    </script>
+    
+    <script type="text/javascript" src="../scripts/script.js"></script>
+    <!-- <script type="text/javascript" src="../scripts/furo.js"></script> -->
 </body>
 
 </html>
