@@ -468,11 +468,11 @@
                 </figure>
 
                 <table>
-                    <caption>Inertia & Load Ratio Definition</caption>
+                    <caption>Inductance definition</caption>
 
                     <tr>
-                        <th>Total Inductance</th>
-                        <th>Frequency in R</th>
+                        <th>Series Inductance</th>
+                        <th>Parallel Inductance</th>
                     </tr>
 
                     <tr>
@@ -482,13 +482,16 @@
                 </table>
 
                 <p>
-                    For high frequency analysis, the gain will be only a function the motor inertia, the load is disconnected from the motor.
+                    Transfer Function:
 
                     $$ \frac{I_c(s)}{V_c(s)}=\frac{1}{sL_t}  \frac{L_{g}s^2 + R_{f}s + \frac{1}{C_f}}{L_{e}s^2 + R_{f}s + \frac{1}{C_f}}$$
 
                 </p>
 
-                <p> Annotation 1: Normally, engineers deal with two-mass mechanical modeling and engineers deal with LCL converter are two group of engineers. But they are exact same mathmatical system expressed at two different domain </p>
+                <p>
+                    Annotation 1: Normally, engineers deal with two-mass mechanical modeling and engineers deal with LCL converter are two group of engineers. But they are exact same mathmatical system expressed at two different domain.
+                    Most of the analysis in above "Two Mass System(Mechanical Resonant System)" can be directly applied to LCL analysis. The only thing is to replace Inertia with Inductance.
+                </p>
                 <p> Annotation 2: Inverter controlled rotating machine and Grid integrated converter with LCL as its load</p>
 
                 <table>
@@ -518,19 +521,29 @@
                 </p>
 
                 <h3>Resonant System with Transformer</h3>
+                <p>
+                    For above "two mass" mechanical resonance system and "LCL" electromagnetic resonance system, the source side variables and load side variables are in one-to-one ratio.
+                    For example, for the "two-mass" system, the torque delivered from motor side to load side has no gearbox to convert.
+                    Also, for the "LCL" system, there is no transformer to amplify the voltage.
+                </p>
+
+                <p>
+                    While, there is mechanical resonant system that has ratio conversion between the source and the load. The <span style="background-color:yellow">harmonic gearing</span> below is a very typical case.
+                    For the electrical side, the ESP (Electrical Submersible Pump) that uses low voltage VFD but medium voltage machine will require a LC since waveform filter and transformer to step up the voltage.  The transformer amply the voltage from the source. 
+                </p>
 
                 <h4>Strain Wave Gearing(Harmonic Gearing)</h4>
                 <figure>
 
                     <div class="image c60"><a href="materials/pictures/harmonic_gearing.png"><img src="materials/pictures/knowledge/harmonic_gearing.png" alt="PPGN teaser image"></a>
                         <figcaption>
-                            Fig. LCL connection between converter and grid.
+                            Fig. Example of a typical harmonics gearing system.
                         </figcaption>
                     </div>
 
                     <div class="image c50"><a href="materials/pictures/harmonic_gearing_1.png"><img src="materials/pictures/knowledge/harmonic_gearing_1.png" alt="PPGN teaser image"></a>
                         <figcaption>
-                            Fig. LCL connection between converter and grid.
+                            Fig. Harmonic gearing in the system.
                         </figcaption>
                     </div>
 
@@ -538,7 +551,7 @@
 
                     <div class="image c40"><a href="materials/pictures/harmonic_gearing_2.png"><img src="materials/pictures/knowledge/harmonic_gearing_2.png" alt="PPGN teaser image"></a>
                         <figcaption>
-                            Fig. LCL connection between converter and grid.
+                            Fig. Mathematical block diagram of harmonic gearing.
                         </figcaption>
                     </div>
                 </figure>
@@ -547,6 +560,9 @@
                 <h4>Electrical Submersible Pump</h4>
                 <p>
                     E-frac systems utilize electrically powered pressure pumps running on modular gas turbine generators, as opposed to the diesel-driven pumps of a conventional system. The turbines make electricity using CNG, LNG or site-produced field gas that may otherwise be flared. This means both fuel savings and carbon reductions are possible.
+                </p>
+                <p>
+                    With regard to the electrical system, E-frac system use a low voltage VFD to drive a medium voltage electric machine.  A LC sine wave filter and an step-up transformer 
                 </p>
                 <figure>
                     <div class="image c40">
@@ -613,6 +629,9 @@
                         </figcaption>
                     </div>
                 </figure>
+
+
+                <h3>Plant Modeling in General</h3>
 
                 <p class="story gray">
                     Posted June 26, 2024.

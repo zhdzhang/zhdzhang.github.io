@@ -620,6 +620,22 @@ div.project-teaser div.video video:hover{
 }
 
 /****** Publications ******/
+
+ol.publist ol,
+ol.publist ul {
+	font-size: 140%;
+	line-height: 1.4;
+}
+
+/* #bodyer ul {
+    list-style: disc;
+} */
+
+ol.publist ul li {
+	margin: .5em 0 .5em 2em;
+	font-weight: 300;	
+}
+
 ol.publist li {
 	list-style: none;
 	margin: 10px 25px;
